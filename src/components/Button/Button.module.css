@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.border {
+    border: dashed 2px blueviolet;
+    border-radius: 3px;
+}
+.button {
+    width: 450px;
+    height: 350px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    align-content: space-evenly;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+.buttonBlock {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.backgroundBlue {
+    background-color:rgb(105, 193, 248);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.backgroundBlue_Big {
+    margin-top: 0.5rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.backgroundBlue_Small {
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
+.searchButton {
+    height: 1rem;
+    padding-top: 0.2rem;
+}
+
+.searchButton_White {
+    fill: white;
+}
+.searchButton_Blue {
+    fill: rgb(105, 193, 248);
+}
+
+.textBlue {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: rgb(105, 193, 248);
+    font-size: 0.7rem;
+}
+
+.textBlue_Big {
+    margin-top: 0.5rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.textBlue_Small {
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.textBlack {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
