@@ -89,3 +89,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+ul {
+    list-style: none;
+}
+/* style="border: none; box-shadow: none;" */

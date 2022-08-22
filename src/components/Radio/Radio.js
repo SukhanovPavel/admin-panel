@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './Radio.module.css';
 
-function App() {
+function Radio() {
     return (
         <div class="radioPos">
             <input type="radio" class="radio" name="" id=""></input>.
@@ -10,4 +9,4 @@ function App() {
     )
 }
 
-export default App;
+export default Radio;

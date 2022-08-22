@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './Checkbox.module.css';
 
-function App() {
+function Checkbox() {
     return (
         <div class="checkbox-pos border">
             <input type="checkbox" class="check" name="" id=""></input>.
@@ -10,4 +9,4 @@ function App() {
     )
 }
 
-export default App;
+export default Checkbox;

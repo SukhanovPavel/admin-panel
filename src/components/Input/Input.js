@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './Input.module.css';
 
-function App() {
+function Input() {
     return (
         <div class="input">
             <div class="field">
@@ -30,4 +29,4 @@ function App() {
     )
 }
 
-export default App;
+export default Input;

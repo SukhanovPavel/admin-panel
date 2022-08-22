@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './Dropdowns.module.css';
 
-function App() {
+function Dropdowns() {
     return (
         <div class="dropdowns">
             <div class="dropdownStyle">
-                <ul style="list-style: none">
+                <ul>
                     <li><input type="checkbox" class="dropdownCheck" name="" id=""></input>.Новый</li>
                     <li class="noLi"></li>
                     <li><input type="checkbox" class="dropdownCheck" name="" id=""></input>.Рассчет</li>
@@ -20,7 +19,7 @@ function App() {
                 </ul>
             </div>
             <div class="dropdownStyle">
-                <ul style="list-style: none">
+                <ul>
                     <li>Новый</li>
                     <li class="noLi"></li>
                     <li>Рассчет</li>
@@ -34,7 +33,7 @@ function App() {
                     <li>Отменен</li>
                 </ul>
             </div>
-            <div class="dropdownStyle" style="border: none; box-shadow: none;" ></div>
+            <div class="dropdownStyle" ></div>
             <div class="dropdownStyle">
                 <span class="topText">
                     Номер страницы
@@ -91,4 +90,4 @@ function App() {
     )
 }
 
-export default App;
+export default Dropdowns;

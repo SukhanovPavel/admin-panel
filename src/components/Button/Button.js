@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './Button.module.css';
 
-function App() {
+function Button() {
     return (
         <div class="button border">
             <div class="buttonBlock">
@@ -172,4 +171,4 @@ function App() {
     )
 }
 
-export default App;
+export default Button;
