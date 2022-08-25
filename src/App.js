@@ -13,8 +13,9 @@ function App() {
     <Radio />
     <Checkbox />
     <Button />
-    <Dropdowns></Dropdowns> 
+    <Dropdowns />
   </body>
+
 }
 
 export default App;

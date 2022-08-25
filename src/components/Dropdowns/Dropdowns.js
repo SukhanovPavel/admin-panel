@@ -33,6 +33,7 @@ function Dropdowns() {
                     <li>Отменен</li>
                 </ul>
             </div>
+
             <div className={styles.dropdownStyleNone} ></div>
             <div className={styles.dropdownStyle}>
                 <span className={styles.topText}>
