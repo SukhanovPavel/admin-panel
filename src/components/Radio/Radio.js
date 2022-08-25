@@ -1,10 +1,10 @@
-import './Radio.module.css';
+import styles from './Radio.module.css';
 
 function Radio() {
     return (
-        <div class="radioPos">
-            <input type="radio" class="radio" name="" id=""></input>.
-            <input type="radio" class="radio" checked="checked" name="" id=""></input>.
+        <div className={styles.radioPos}>
+            <input type={styles.radio} className={styles.radio} name="" id=""></input>
+            <input type={styles.radio} className={styles.radio} checked="checked" name="" id=""></input>
         </div>
     )
 }

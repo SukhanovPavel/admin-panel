@@ -1,10 +1,10 @@
-import './Checkbox.module.css';
+import styles from './Checkbox.module.css';
 
 function Checkbox() {
     return (
-        <div class="checkbox-pos border">
-            <input type="checkbox" class="check" name="" id=""></input>.
-            <input type="checkbox" class="check" checked="checked" name="" id=""></input>.
+        <div className={styles.checkbox}>
+            <input type="checkbox" className={styles.check} name="" id=""></input>
+            <input type="checkbox" className={styles.check} checked="checked" name="" id=""></input>
         </div>
     )
 }

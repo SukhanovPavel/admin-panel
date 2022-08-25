@@ -9,12 +9,14 @@
     justify-content: center;
     align-items: center ;
 }
-.inputForm {
+.inputFormborderBlue {
     position: relative;
     width: 200px;
     height: 1.5rem;
     display: flex;
     justify-content: space-between;
+    border: solid 2px #337AB7;
+    border-radius: 3px;
 }
 .borderBlue {
     border: solid 2px #337AB7;

@@ -13,7 +13,17 @@
     flex-wrap: wrap;
     font-size: 0.8rem;
 }
-
+.dropdownStyleNone {
+    border: none; 
+    box-shadow: none;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 25%;
+}
 .dropdownStyle {
     padding: 0.5rem;
     margin-left: 2rem;
@@ -50,7 +60,12 @@
     color: rgb(105, 193, 248);
     font-size: 0.7rem;
 }
-.textBlue_Small {
+.textBlueSmall {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: rgb(105, 193, 248);
+    font-size: 0.7rem;
     height: 1.5rem;
     padding-left: 1rem;
     padding-top: 0.2rem;
@@ -62,6 +77,13 @@
     margin-top: 0.5rem;
     padding: 0.2rem;
 }
+.inputFormDrDwBlue {
+    border: solid 2px #337AB7;
+    border-radius: 3px;
+    width: 98%;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
 .backgroundBlue {
     background-color:rgb(105, 193, 248);
     border: none;
@@ -69,7 +91,12 @@
     color: white;
     font-size: 0.7rem;
 }
-.backgroundBlue_Small {
+.backgroundBlueSmall {
+    background-color:rgb(105, 193, 248);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
     height: 1.5rem;
     padding-left: 1rem;
     padding-top: 0.2rem;

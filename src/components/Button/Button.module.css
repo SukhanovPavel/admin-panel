@@ -7,7 +7,9 @@
     border: dashed 2px blueviolet;
     border-radius: 3px;
 }
-.button {
+.buttonBorder {
+    border: dashed 2px blueviolet;
+    border-radius: 3px;
     width: 450px;
     height: 350px;
     margin-top: 50px;
@@ -34,13 +36,23 @@
     font-size: 0.7rem;
 }
 
-.backgroundBlue_Big {
+.backgroundBlueBig {
     margin-top: 0.5rem;
     height: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    background-color:rgb(105, 193, 248);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
 }
-.backgroundBlue_Small {
+.backgroundBlueSmall {
+    background-color:rgb(105, 193, 248);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
     height: 1.5rem;
     padding-left: 1rem;
     padding-top: 0.2rem;
@@ -50,12 +62,18 @@
 .searchButton {
     height: 1rem;
     padding-top: 0.2rem;
+    margin-right: 0.2rem;
 }
-
-.searchButton_White {
+.searchButtonWhite {
+    margin-right: 0.2rem;
+    height: 1rem;
+    padding-top: 0.2rem;
     fill: white;
 }
-.searchButton_Blue {
+.searchButtonBlue {
+    margin-right: 0.2rem;
+    height: 1rem;
+    padding-top: 0.2rem;
     fill: rgb(105, 193, 248);
 }
 
@@ -67,7 +85,12 @@
     font-size: 0.7rem;
 }
 
-.textBlue_Big {
+.textBlueBig {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: rgb(105, 193, 248);
+    font-size: 0.7rem;
     margin-top: 0.5rem;
     height: 2rem;
     padding-left: 1rem;
@@ -76,7 +99,12 @@
     padding-bottom: 0.2rem;
 }
 
-.textBlue_Small {
+.textBlueSmall {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: rgb(105, 193, 248);
+    font-size: 0.7rem;
     height: 1.5rem;
     padding-left: 1rem;
     padding-top: 0.2rem;

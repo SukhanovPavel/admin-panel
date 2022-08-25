@@ -3,11 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 } 
-.border {
+.checkbox {
     border: dashed 2px blueviolet;
     border-radius: 3px;
-}
-.checkbox-pos {
     margin-top: 50px;
     width: 110px;
     height: 70px;
