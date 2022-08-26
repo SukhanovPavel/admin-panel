@@ -1,10 +1,11 @@
-import Button from "./components/Button/Button.js";
-import Checkbox from "./components/Checkbox/Checkbox";
-import Dropdowns from "./components/Dropdowns/Dropdowns";
-import Input from "./components/Input/Input";
-import Radio from "./components/Radio/Radio";
-import Searchbar from "./components/Searchbar/Searchbar";
-
+import {
+  Button,
+    Checkbox,
+    Dropdowns,
+    Input,
+    Radio,
+    Searchbar,
+} from './components/index'
 
 function App() {
   return <div>
@@ -13,7 +14,9 @@ function App() {
     <Radio />
     <Checkbox />
     <Button />
-    <Dropdowns></Dropdowns> 
+    <Dropdowns 
+      isOpen={false}
+    />
   </div>
 }
 

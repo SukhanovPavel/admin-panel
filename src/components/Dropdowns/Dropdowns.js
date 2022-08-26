@@ -1,9 +1,15 @@
+import classnames from 'classnames';
 import styles from './Dropdowns.module.css';
 
-function Dropdowns() {
+
+function Dropdowns(isOpen) {
+    const blockClass = classnames({
+        [styles.dropdownStyle]: isOpen,
+        [styles.dropdownStyleNull]: true,
+    })
     return (
         <div className={styles.dropdowns}>
-            <div className={styles.dropdownStyle}>
+            <div className={blockClass}>
                 <ul>
                     <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Новый</li>
                     <li className={styles.noLi}></li>
