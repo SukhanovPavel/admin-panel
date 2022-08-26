@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.dropdowns {
+    width: 500px;
+    height: 400px;
+    margin-top: 50px;
+    border: dashed 2px blueviolet;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+}
+.dropdownStyleNone {
+    border: none; 
+    box-shadow: none;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 25%;
+}
+.dropdownStyleNull {
+    display: none;
+}
+.dropdownStyle {
+    padding: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 25%;
+    height: min-content;
+    border-radius: 4px;
+    border-style: solid white;
+    background: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.noLi {
+    height: 0.5rem;
+}
+
+.dropdownCheck {
+    margin-right: 0.5rem;
+}
+
+#checkedLi {
+    color: blue;
+}
+.topText {
+    font-family: sans-serif;
+    font-size: 0.7rem;
+}
+.textBlue {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: rgb(105, 193, 248);
+    font-size: 0.7rem;
+}
+.textBlueSmall {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: rgb(105, 193, 248);
+    font-size: 0.7rem;
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
+.inputFormDrDw {
+    width: 98%;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
+.inputFormDrDwBlue {
+    border: solid 2px #337AB7;
+    border-radius: 3px;
+    width: 98%;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
+.backgroundBlue {
+    background-color:rgb(105, 193, 248);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
+}
+.backgroundBlueSmall {
+    background-color:rgb(105, 193, 248);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2rem;
+}
+.borderBlue {
+    border: solid 2px #337AB7;
+    border-radius: 3px;
+}
+.inputFormDrDw::placeholder {
+    font-size: 0.7rem;
+}
+
+#alignItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+/* style="border: none; box-shadow: none;" */
