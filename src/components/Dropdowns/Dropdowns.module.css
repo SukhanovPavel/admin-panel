@@ -25,7 +25,8 @@
     flex: 0 0 25%;
 }
 .dropdownStyleNull {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
 }
 .dropdownStyle {
     padding: 0.5rem;

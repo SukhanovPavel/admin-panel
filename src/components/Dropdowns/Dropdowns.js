@@ -5,7 +5,7 @@ import styles from './Dropdowns.module.css';
 function Dropdowns({isOpen}) {
     const blockStyle = classnames({
         [styles.dropdownStyle]: isOpen,
-        [styles.dropdownStyleNull]: true,
+        [styles.dropdownStyleNull]: !isOpen,
     })
     return (
         <div className={styles.dropdowns}>
