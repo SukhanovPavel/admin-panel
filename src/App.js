@@ -10,7 +10,10 @@ import {
 
 function App() {
   return <div>
-    <Input />
+    <Input 
+      isErr={false}
+      isLock={true}
+      />
     <Searchbar />
     <Radio />
     <Checkbox />
