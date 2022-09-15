@@ -5,11 +5,12 @@ import {
   Input,
   Radio,
   Searchbar,
-} from './components/index';
+} from '../index';
 
+import styles from './App.module.css';
 
 function App() {
-  return <div>
+  return <div className={styles.flex}>
     <Input 
       isErr={false}
       isLock={true}
