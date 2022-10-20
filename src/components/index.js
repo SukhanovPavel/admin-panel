@@ -1,3 +1,4 @@
+import App from "./App/App"
 import Button from "./Button/Button.js";
 import Checkbox from "./Checkbox/Checkbox";
 import Dropdowns from "./Dropdowns/Dropdowns";
@@ -8,6 +9,7 @@ import { PageHeader } from "./PageHeader/PageHeader.js";
 import { FilterRow } from "./FilterRow/FilterRow.js";
 
 export {
+    App,
     Button,
     Checkbox,
     Dropdowns,

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.inputForm {
+    position: relative;
+    width: 200px;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #337AB7;
+    border-radius: 3px;
+}
+.inputFormError {
+    position: relative;
+    width: 200px;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #b73333;
+    border-radius: 3px;
+}
+.inputFormLock {
+    position: relative;
+    width: 200px;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #337AB7;
+    border-radius: 3px;
+    background: #94b3ce;
+}
+.inp {
+    left: 5px;
+    width: 200px;
+    border: none;
+    background: none;
+    font-size: 0.8rem;
+}
+.borderBlue {
+    border: solid 2px #337AB7;
+    border-radius: 3px;
+}
+
+.borderRed {
+    border: solid 2px #b73333;
+    border-radius: 3px;
+}
+
+.backgroundBlue {
+    background: #94b3ce;
+}
+
+.x {
+    border: none;
+    background: none;
+}
+.xNone {
+    display: none;
+}
+.topText {
+    font-family: sans-serif;
+    font-size: 0.7rem;
+}
+.lockNone {
+    display: none;
+}
+.lock {
+    fill: black;
+    stroke:black;
+    margin-right: 0.3rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+input[id="black"]::placeholder { color: black; }
+
+input[name="searchFocus"]:focus {
+    margin-left: -20px;
+    padding-left: 20px;
+}
