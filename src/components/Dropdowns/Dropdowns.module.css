@@ -29,25 +29,31 @@
     visibility: hidden;
 }
 .dropdownStyle {
-    padding: 0.5rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    position: absolute;
+    right: 0px;
+    bottom: -212px;
+    width: 160px;
+    height: 208px;
+    /* padding: 0.5rem; */
+    /* margin-left: 2rem;
+    margin-top: 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 0 0 25%;
-    height: min-content;
+    /* flex: 0 0 25%; */
+    /* height: min-content; */
     border-radius: 4px;
     border-style: solid white;
     background: white;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.noLi {
-    height: 0.5rem;
-}
-
 .dropdownCheck {
-    margin-right: 0.5rem;
+    margin: 16px 8px 0px 16px;
 }
 
 #checkedLi {

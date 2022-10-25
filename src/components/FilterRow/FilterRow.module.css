@@ -1,9 +1,52 @@
-.header {
-    margin: 0 48px 16px 48px;
+.filterBottom {
+    margin: 0 48px 32px 48px;
+    padding: 16px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-start;
     font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    height: 88px;
+    background: #EBF0F5;
+    border-radius: 8px;
 }
+.inputDate {
+    display: flex;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 8px;
+    width: 288px;
+    height: 56px;
+}
+.inputStatus{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 192px;
+    height: 56px;
+}
+.inputPrice {
+    display: flex;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 8px;
+    width: 256px;
+    height: 56px;
+}
+
+
+
+
+
+
+
+
+
 .topInpContainer {
     display: flex;
     align-items: center;

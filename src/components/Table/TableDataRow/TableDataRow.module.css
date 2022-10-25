@@ -1,0 +1,62 @@
+.tableDataRow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #EBF0F5;
+}
+.check {
+    width: 32px;
+    padding: 12px 8px 12px 8px;
+    margin: 0 8px;
+}
+.orderNumber {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 108px;
+    height: 40px;
+    padding: 12px 8px 12px 8px;
+}
+.orderDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 8px 12px 8px;
+    width: 206px;
+    height: 40px;
+}
+.orderStatus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    width: 176px;
+    height: 40px;
+}
+.numOfProducts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 8px;
+    width: 120px;
+    height: 40px;
+}
+.orderPrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 8px;
+    width: 128px;
+    height: 40px;
+}
+.clientName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    width: 772px;
+    height: 40px;
+}

@@ -1,16 +1,17 @@
 
 import {
-  Button,
-  Checkbox,
-  Dropdowns,
-  Input,
-  Radio,
-  Searchbar,
+  // Button,
+  // Checkbox,
+  // Dropdowns,
+  // Input,
+  // Radio,
+  // Searchbar,
   PageHeader,
-  FilterRow
+  FilterRow,
+  Table
 } from '../index';
 
-import styles from './App.module.css';
+// import styles from './App.module.css';
 
 // function App() {
 //   return <div>
@@ -32,7 +33,7 @@ const App = () => {
   return (<>
   <PageHeader />
   <FilterRow />
-  <div></div>
+  <Table />
   </>
   )
 }

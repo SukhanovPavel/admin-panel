@@ -1,6 +1,6 @@
-import cx from 'classnames';
+// import cx from 'classnames';
 import styles from './Input.module.css';
-import { InputForm } from './InputForm/InputForm';
+import { InputForm } from '../index';
 
 function Input({isErr, isLock}) {
     // const inputStyles = cx({

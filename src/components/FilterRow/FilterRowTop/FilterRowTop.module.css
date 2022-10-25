@@ -1,0 +1,15 @@
+.header {
+    margin: 0 48px 16px 48px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+}
+.topInpContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
