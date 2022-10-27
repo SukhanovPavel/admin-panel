@@ -3,6 +3,7 @@ import cx from 'classnames';
 import styles from './Buttons.module.css';
 
 export const Buttons = ({
+    handleClick,
     icon,
     text,
     isButton1,
@@ -20,6 +21,7 @@ export const Buttons = ({
     isButton13,
     isButton14,
     isButton15,
+    isRed,
     buttonNone
 }) => {
 
@@ -39,15 +41,19 @@ export const Buttons = ({
             [styles.button13]: isButton13,
             [styles.button14]: isButton14,
             [styles.button15]: isButton15,
+            [styles.red]: isRed,
             [styles.buttonNone]: buttonNone
         })
 
     return (
         <>
-        <button className={buttonClass}>
+        <div 
+            className={buttonClass}
+            onClick={handleClick}
+        >
             {icon}
             {text}
-        </button>
+        </div>
         </>
     )
 }

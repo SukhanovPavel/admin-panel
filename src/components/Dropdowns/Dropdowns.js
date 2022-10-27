@@ -1,29 +1,16 @@
-import classnames from 'classnames';
+
+import { 
+    ListDD,
+    DeleteDD
+} from '../index';
+
 import styles from './Dropdowns.module.css';
 
 
-function Dropdowns({isOpen}) {
-    const blockStyle = classnames({
-        [styles.dropdownStyle]: isOpen,
-        [styles.dropdownStyleNull]: !isOpen,
-    })
+function Dropdowns() {
     return (
         <div className={styles.dropdowns}>
-            <div className={blockStyle}>
-                <ul>
-                    <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Новый</li>
-                    <li className={styles.noLi}></li>
-                    <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Рассчет</li>
-                    <li className={styles.noLi}></li>
-                    <li><input type="checkbox" className={styles.dropdownCheck} checked="checked" name="" id=""></input>Подтвержден</li>
-                    <li className={styles.noLi}></li>
-                    <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Отложен</li>
-                    <li className={styles.noLi}></li>
-                    <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Выполнен</li>
-                    <li className={styles.noLi}></li>
-                    <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Отменен</li>
-                </ul>
-            </div>
+            <ListDD />
             <div className={styles.dropdownStyle}>
                 <ul>
                     <li>Новый</li>
@@ -46,21 +33,7 @@ function Dropdowns({isOpen}) {
                 </span>
                 <input type="text" name="" id="" placeholder="Введите номер" className={styles.inputFormDrDwBlue}></input>
             </div>
-            <div className={styles.dropdownStyle} id={styles.alignItems}>
-                <span className={styles.topText}>
-                    Удалить n записей
-                </span>
-                <div className={styles.buttonTwo}>
-                    <button className={styles.textBlueSmall}>
-                        Удалить
-                    </button>
-                </div>
-                <div className={styles.buttonTwo}>
-                    <button className={styles.backgroundBlueSmall}>
-                        Отменить
-                    </button>
-                </div>
-            </div>
+            <DeleteDD />
             <div className={styles.dropdownStyle}>
                 <span className={styles.topText}>
                     Выберете тему
@@ -97,27 +70,3 @@ function Dropdowns({isOpen}) {
 }
 
 export default Dropdowns;
-
-export const ListDD = ({isOpen}) => {
-    const blockStyle = classnames({
-        [styles.dropdownStyle]: isOpen,
-        [styles.dropdownStyleNull]: !isOpen,
-    })
-    return (
-        <div className={blockStyle}>
-            <ul>
-                <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Новый</li>
-                <li className={styles.noLi}></li>
-                <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Рассчет</li>
-                <li className={styles.noLi}></li>
-                <li><input type="checkbox" className={styles.dropdownCheck} checked="checked" name="" id=""></input>Подтвержден</li>
-                <li className={styles.noLi}></li>
-                <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Отложен</li>
-                <li className={styles.noLi}></li>
-                <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Выполнен</li>
-                <li className={styles.noLi}></li>
-                <li><input type="checkbox" className={styles.dropdownCheck} name="" id=""></input>Отменен</li>
-            </ul>
-        </div>
-    )
-}

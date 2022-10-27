@@ -1,4 +1,4 @@
-import { Check } from "../../index";
+import { Check } from "../../../index";
 
 import styles from "./TableDataRow.module.css";
 
