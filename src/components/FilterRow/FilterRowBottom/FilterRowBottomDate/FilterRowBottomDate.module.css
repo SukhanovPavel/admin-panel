@@ -1,0 +1,13 @@
+.inputDate {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 4px;
+    width: 288px;
+    height: 56px;
+}

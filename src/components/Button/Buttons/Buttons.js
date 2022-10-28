@@ -1,10 +1,12 @@
 import cx from 'classnames';
+import { SvgIcons } from '../../Svg/SvgIcons';
 
 import styles from './Buttons.module.css';
 
 export const Buttons = ({
     handleClick,
     icon,
+    color,
     text,
     isButton1,
     isButton2,
@@ -51,7 +53,7 @@ export const Buttons = ({
             className={buttonClass}
             onClick={handleClick}
         >
-            {icon}
+            <SvgIcons icon={icon} color={color}/>
             {text}
         </div>
         </>

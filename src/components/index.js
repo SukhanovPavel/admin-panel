@@ -22,30 +22,66 @@ import { TableDataRow } from "./Table/TableBody/TableDataRow/TableDataRow";
 import { TableBody } from "./Table/TableBody/TableBody";
 import { DeleteDD } from "./Dropdowns/DeleteDD/DeleteDD";
 import { TableFooter } from "./Table/TableFooter/TableFooter";
+import { Abort } from "./Svg/Abort/Abort";
+import { Bin } from "./Svg/Bin/Bin";
+import { Checkmark } from "./Svg/Checkmark/Checkmark";
+import { Dot } from "./Svg/Dot/Dot";
+import { Filter } from "./Svg/Filter/Filter";
+import { Locked } from "./Svg/Locked/Locked";
+import { Moon } from "./Svg/Moon/Moon";
+import { Pencil } from "./Svg/Pencil/Pencil";
+import { Refresh } from "./Svg/Refresh/Refresh";
+import { Search } from "./Svg/Search/Search";
+import { Sun } from "./Svg/Sun/Sun";
+import { VArrow } from "./Svg/VArrow/VArrow";
+import { XLarge } from "./Svg/XLarge/XLarge";
+import { XMedium } from "./Svg/XMedium/XMedium";
+import { SvgIcons } from "./Svg/SvgIcons";
+import { FilterRowBottomDate } from "./FilterRow/FilterRowBottom/FilterRowBottomDate/FilterRowBottomDate";
+import { FilterRowBottomStatus } from "./FilterRow/FilterRowBottom/FilterRowBottomStatus/FilterRowBottomStatus";
+import { FilterRowBottomPrice } from "./FilterRow/FilterRowBottom/FilterRowBottomPrice/FilterRowBottomPrice";
 
 export {
-    App,
-    Button,
-    Checkbox,
-    Dropdowns,
-    Input,
-    Radio,
-    Searchbar,
-    PageHeader,
-    FilterRow,
-    Buttons,
-    SearchForm,
-    FilterRowTop,
-    InputForm,
-    ListDD,
-    FilterRowBottom,
-    Table,
-    Check,
-    TableHeader,
-    TableColumnNames,
-    TableData,
-    TableDataRow,
-    TableBody,
-    DeleteDD,
-    TableFooter
-}
+  App,
+  Button,
+  Checkbox,
+  Dropdowns,
+  Input,
+  Radio,
+  Searchbar,
+  PageHeader,
+  FilterRow,
+  Buttons,
+  SearchForm,
+  FilterRowTop,
+  InputForm,
+  ListDD,
+  FilterRowBottom,
+  Table,
+  Check,
+  TableHeader,
+  TableColumnNames,
+  TableData,
+  TableDataRow,
+  TableBody,
+  DeleteDD,
+  TableFooter,
+  Abort,
+  Bin,
+  Checkmark,
+  Dot,
+  Filter,
+  Locked,
+  Moon,
+  Pencil,
+  Refresh,
+  Search,
+  Sun,
+  VArrow,
+  XLarge,
+  XMedium,
+  SvgIcons,
+  FilterRowBottomDate,
+  FilterRowBottomStatus,
+  FilterRowBottomPrice,
+};
