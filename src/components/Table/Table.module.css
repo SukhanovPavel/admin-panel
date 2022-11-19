@@ -1,0 +1,9 @@
+.tableContainer{
+    margin: 0 48px 32px 48px;
+    height: 520px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+}

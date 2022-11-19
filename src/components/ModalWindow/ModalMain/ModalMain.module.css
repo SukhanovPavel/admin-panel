@@ -1,0 +1,18 @@
+.modalMain {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 56px;
+    bottom: 48px;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 32px 24px 48px 16px;
+}

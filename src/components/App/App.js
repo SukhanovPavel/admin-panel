@@ -1,28 +1,28 @@
+import { useState } from 'react';
 import {
-  Button,
-  Checkbox,
-  Dropdowns,
-  Input,
-  Radio,
-  Searchbar,
+  PageHeader,
+  FilterRow,
+  Table,
+  ModalCard
 } from '../index';
 
-import styles from './App.module.css';
 
-function App() {
-  return <div className={styles.flex}>
-    <Input 
-      isErr={false}
-      isLock={true}
+const App = () => {
+  const [modalState, setModalState] = useState(false, );
+  return (
+  <>
+    <PageHeader/>
+    <FilterRow />
+    <Table openModal={() => setModalState(!modalState)} />
+    {modalState ? (
+      <ModalCard
+        // getModal={modalState}
+        handleClickCloseModal={() => setModalState(!modalState)}
+        handleClickcloseModalOutside={() => setModalState(!modalState)}
       />
-    <Searchbar />
-    <Radio />
-    <Checkbox />
-    <Button />
-    <Dropdowns 
-      isOpen = {true}
-    />
-  </div>
+    ) : null} 
+  </>
+  );
 }
 
 export default App;

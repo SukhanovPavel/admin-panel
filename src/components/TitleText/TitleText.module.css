@@ -1,0 +1,21 @@
+.title {
+    width: 197px;
+    height: 32px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+}
+.titleBlue {
+    width: 408px;
+    height: 32px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    color: #BAD8F5;
+}

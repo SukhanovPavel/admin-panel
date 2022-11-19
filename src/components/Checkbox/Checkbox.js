@@ -1,12 +1,23 @@
+import cx from 'classnames';
+import { SvgIcons } from '../index';
+import { ICON_NAME as icon } from '../Svg/SvgIcons/SvgIcons';
 import styles from './Checkbox.module.css';
 
-function Checkbox() {
-    return (
-        <div className={styles.checkbox}>
-            <input type="checkbox" className={styles.check} name="" id=""></input>
-            <input type="checkbox" className={styles.check} checked="checked" name="" id=""></input>
-        </div>
-    )
-}
+export const Checkbox = ({
+    handleCheckboxClick,
+    checked
+}) => {
 
-export default Checkbox;
+    const blockStyle = cx( styles._, { 
+        [styles.checked]: checked
+    })
+
+    return (
+      <div
+        className={blockStyle}
+        onClick={handleCheckboxClick}
+        >
+        {checked ? <SvgIcons icon={icon.Checkmark} color={"white"} /> : null}
+      </div>
+    );
+}

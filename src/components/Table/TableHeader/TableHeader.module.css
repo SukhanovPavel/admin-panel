@@ -1,0 +1,78 @@
+.tableHeader {
+    display: flex;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    width: 100%;
+    height: 40px;
+    min-height: 32px;
+    background: #459DF5;;
+}
+.columnCheck {
+    width: 32px;
+    padding: 12px 8px 12px 8px;
+    margin: 0 8px;
+}
+.columnNumber {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 108px;
+    height: 40px;
+    padding: 12px 8px 12px 8px;
+    color: white;
+}
+.columnDate {
+    background: rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px 12px 8px;
+    width: 206px;
+    height: 40px;
+    color: white;
+}
+.columnStatus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    width: 176px;
+    height: 40px;
+    color: white;
+}
+.columnPos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    width: 120px;
+    height: 40px;
+    color: white;
+}
+.columnPrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    width: 128px;
+    height: 40px;
+    color: white;
+}
+.columnClientName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px;
+    width: 772px;
+    height: 40px;
+    color: white;
+}

@@ -1,0 +1,25 @@
+.scroll{
+    position: absolute;
+    width: 8px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.scrollBody{
+    position: absolute;
+    width: 4px;
+    height: 65px;
+    left: 0px;
+    top: 12px;
+    background: rgba(0, 0, 0, 0.34);
+    border-radius: 8px;
+}
+.scrollRoad{
+    position: absolute;
+    width: 4px;
+    left: 0px;
+    top: 4px;
+    bottom: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}

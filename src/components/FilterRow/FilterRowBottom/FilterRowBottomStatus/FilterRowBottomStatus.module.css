@@ -1,0 +1,25 @@
+.inputStatus{
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 192px;
+    height: 56px;
+}
+/* .posRelative {
+    position: relative;
+} */
+.posAbsolute {
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    bottom: -200px;
+}
+.mixDD {
+    align-items: flex-start;
+}
+.noneDD {display: none;}
