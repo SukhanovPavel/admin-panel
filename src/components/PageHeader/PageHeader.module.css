@@ -4,15 +4,6 @@
     font-family: 'Ubuntu', sans-serif;
     margin: 32px 48px;
 }
-.title {
-    width: 197px;
-    height: 32px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 32px;
-    letter-spacing: -0.2px;
-}
 .button {
     background: none;
     border: none;

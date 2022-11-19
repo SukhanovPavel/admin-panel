@@ -6,7 +6,9 @@ import {
 
 import styles from "./Table.module.css";
 
-export const Table = () => {
+export const Table = ({
+    openModal
+}) => {
     return (
         <div className={styles.tableContainer}>
             
@@ -14,7 +16,7 @@ export const Table = () => {
 
             <TableBody />
 
-            <TableFooter />
+            <TableFooter openModal={openModal}/>
             
         </div>
     )

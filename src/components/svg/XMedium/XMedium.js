@@ -1,6 +1,6 @@
 export const XMedium = ({ color }) => {
     return (
-      <svg
+      <svg 
         width="16"
         height="16"
         viewBox="0 0 16 16"

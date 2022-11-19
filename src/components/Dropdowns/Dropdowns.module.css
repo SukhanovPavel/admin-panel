@@ -1,137 +1,31 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-.dropdowns {
-    width: 500px;
-    height: 400px;
-    margin-top: 50px;
-    border: dashed 2px blueviolet;
-    border-radius: 3px;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.8rem;
-}
-.dropdownStyleNone {
-    border: none; 
-    box-shadow: none;
-    padding: 0.5rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 0 0 25%;
-}
-.dropdownStyleNull {
-    /* display: none; */
-    visibility: hidden;
-}
-.dropdownStyle {
+._ {
+    z-index: 1;
     font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
-    position: absolute;
-    right: 0px;
-    bottom: -212px;
     width: 160px;
-    height: 208px;
-    /* padding: 0.5rem; */
-    /* margin-left: 2rem;
-    margin-top: 2rem; */
+    padding: 16px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* flex: 0 0 25%; */
-    /* height: min-content; */
-    border-radius: 4px;
-    border-style: solid white;
-    background: white;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
-.dropdownCheck {
-    margin: 16px 8px 0px 16px;
-}
-
-#checkedLi {
-    color: blue;
-}
-.topText {
-    font-family: sans-serif;
-    font-size: 0.7rem;
-}
-.textBlue {
-    background: none;
-    border: none;
-    border-radius: 4px;
-    color: #459DF5;
-    font-size: 0.7rem;
-}
-.textBlueSmall {
-    background: none;
-    border: none;
-    border-radius: 4px;
-    color: #459DF5;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 4px 8px;
+    /* justify-content: space-between; */
     gap: 4px;
-    width: 72px;
-    height: 24px;
+    /* padding: 16px 0px 16px 0px; */
+    /* align-self: stretch; */
 }
-.inputFormDrDw {
-    width: 98%;
-    margin-top: 0.5rem;
-    padding: 0.2rem;
-}
-.inputFormDrDwBlue {
-    border: solid 2px #337AB7;
-    border-radius: 3px;
-    width: 98%;
-    margin-top: 0.5rem;
-    padding: 0.2rem;
-}
-.backgroundBlue {
-    background-color:#459DF5;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 0.7rem;
-}
-.backgroundBlueSmall {
-    border: none;
-    border-radius: 4px;
-    color: white;
+.title {
+    /* height: 32px; */
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    padding: 4px 8px;
-    gap: 4px;
-    width: 72px;
-    height: 24px;
-    background: #459DF5;
-}
-.borderBlue {
-    border: solid 2px #337AB7;
-    border-radius: 3px;
-}
-.inputFormDrDw::placeholder {
-    font-size: 0.7rem;
-}
-
-#alignItems {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
-
-ul {
-    list-style: none;
+.alignStart {
+    display: flex;
+    align-items: flex-start;
 }
-/* style="border: none; box-shadow: none;" */

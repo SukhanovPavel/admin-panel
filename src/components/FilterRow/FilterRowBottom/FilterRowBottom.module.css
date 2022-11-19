@@ -19,33 +19,6 @@
 .filterNone{
     display: none;
 }
-.inputDate {
-    display: flex;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 4px;
-    width: 288px;
-    height: 56px;
-}
-.inputStatus{
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    width: 192px;
-    height: 56px;
-}
-.inputPrice {
-    display: flex;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 4px;
-    width: 256px;
-    height: 56px;
-}
-.inputButton {
-    display: flex;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 8px;
-    height: 56px;
+.button {
+    width: 88px;
 }

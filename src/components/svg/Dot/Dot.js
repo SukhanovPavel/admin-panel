@@ -1,3 +1,4 @@
+
 export const Dot = ({ color }) => {
     return (
       <svg

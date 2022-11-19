@@ -1,20 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
+._ {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
     box-sizing: border-box;
-} 
-.checkbox {
-    border: dashed 2px blueviolet;
-    border-radius: 3px;
-    margin-top: 50px;
-    width: 110px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    background: #FFFFFF;
+    border: 1px solid #BAD8F5;
+    border-radius: 2px;
 }
-
-.check {
-    width: 20px;
-    height: 20px;
+.checked {
+    background: #459DF5;
 }

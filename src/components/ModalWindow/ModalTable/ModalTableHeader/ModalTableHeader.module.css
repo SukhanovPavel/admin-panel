@@ -1,0 +1,32 @@
+.modalTableHeader {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    width: 440px;
+    height: 32px;
+    background: #459DF5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #EBF0F5;
+}
+.article{
+    padding: 8px;
+    gap: 4px;
+    width: 96px;
+    height: 32px;
+}
+.product {
+    padding: 8px;
+    gap: 4px;
+    width: 232px;
+    height: 32px;
+}
+.price {
+    padding: 8px;
+    gap: 4px;
+    width: 96px;
+    height: 32px;
+}

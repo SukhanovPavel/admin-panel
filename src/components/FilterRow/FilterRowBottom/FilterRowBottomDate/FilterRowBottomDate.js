@@ -1,35 +1,61 @@
-import { useState } from "react";
-import { InputForm, Buttons } from "../../../index";
 
+import {
+  Input,
+  Button,
+} from "../../../index";
+import {
+  BUTTON_SIZE as size,
+  BUTTON_COLOR as color
+} from "../../../Button/Button";
 import styles from "./FilterRowBottomDate.module.css";
 
-const dateI = new Date();
 
-export const FilterRowBottomDate = () => {
-  let [val, setValue] = useState(`${dateI.getDate()}.${
-      dateI.getMonth() > 9 ? dateI.getMonth() : "0" + dateI.getMonth()
-    }.${dateI.getFullYear()}`);
-    let a = false;
+
+export const FilterRowBottomDate = ({
+  onChangeDateOne,
+  onChangeDateTwo,
+  dateValueInputOne,
+  handleClickDate,
+  handleClickDateTwo,
+  dateValueInputTwo
+}) => {
+  
   return (
     
     <div className={styles.inputDate}>
-      <InputForm
-        isErr={a}
+      <Input
         span={"с"}
         topText={"Дата оформления"}
         placeholder={"dd.mm.yyyy"}
-        value={val}
-        onChange={ (event) => setValue(val = event.target.value)}
+        value={dateValueInputOne}
+        onChange={ onChangeDateOne }
         children={
-          <Buttons 
-            isButton6={true}
+          dateValueInputOne?
+          <Button
+            color={color.blueText}
+            size={size.small}
             icon={"XMedium"}
-            color={"#BAD8F5"}
-            handleClick={() => setValue(val="")}
-          />
+            iconColor={"#BAD8F5"}
+            handleClick={handleClickDate}
+          /> 
+          : null
         }
       />
-      <InputForm span={"по"} placeholder={"dd.mm.yyyy"} />
+      <Input
+        span={"по"}
+        value={dateValueInputTwo}
+        placeholder={"dd.mm.yyyy"}
+        onChange={ onChangeDateTwo}
+        children={
+          dateValueInputTwo? <Button
+            color={color.blueText}
+            size={size.small}
+            icon={"XMedium"}
+            iconColor={"#BAD8F5"}
+            handleClick={handleClickDateTwo}
+          /> : null
+        }
+      />
     </div>
   );
 }

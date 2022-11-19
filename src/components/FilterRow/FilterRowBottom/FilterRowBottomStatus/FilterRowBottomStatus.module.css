@@ -10,3 +10,16 @@
     width: 192px;
     height: 56px;
 }
+/* .posRelative {
+    position: relative;
+} */
+.posAbsolute {
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    bottom: -200px;
+}
+.mixDD {
+    align-items: flex-start;
+}
+.noneDD {display: none;}

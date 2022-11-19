@@ -1,22 +1,41 @@
 import {
-    InputForm,
-    Buttons
+    Input,
+    Button
 } from "../../../index";
-
+import {
+  BUTTON_SIZE as size,
+  BUTTON_COLOR as color
+} from "../../../Button/Button";
 import styles from "./FilterRowBottomPrice.module.css";
 
 export const FilterRowBottomPrice = () => {
     return (
       <div className={styles.inputPrice}>
-        <InputForm
+        <Input
           topText={"Сумма заказа"}
           span={"от"}
           value={"5000"}
           children={
-            <Buttons isButton6={true} icon={"XMedium"} color={"#BAD8F5"} />
+            <Button
+              size={size.small}
+              color={color.blueText}
+              icon={"XMedium"}
+              iconColor={"#BAD8F5"}
+            />
           }
         />
-        <InputForm span={"до"} placeholder={"₽"} />
+        <Input
+          span={"до"}
+          placeholder={"₽"}
+          children={
+            <Button
+              size={size.small}
+              color={color.blueText}
+              icon={"XMedium"}
+              iconColor={"#BAD8F5"}
+            />
+          }
+        />
       </div>
     );
 };

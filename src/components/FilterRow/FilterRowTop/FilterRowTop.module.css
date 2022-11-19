@@ -10,6 +10,9 @@
 }
 .topInpContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0px;
     gap: 16px;
+    width: 613px;
+    height: 32px;
 }

@@ -1,41 +1,28 @@
-
+import { useState } from 'react';
 import {
-  // Button,
-  // Checkbox,
-  // Dropdowns,
-  // Input,
-  // Radio,
-  // Searchbar,
   PageHeader,
   FilterRow,
-  Table
+  Table,
+  ModalCard
 } from '../index';
 
-// import styles from './App.module.css';
-
-// function App() {
-//   return <div>
-//     <Input 
-//       isErr={false}
-//       isLock={true}
-//       />
-//     <Searchbar />
-//     <Radio />
-//     <Checkbox />
-//     <Button />
-//     <Dropdowns 
-//       isOpen = {true}
-//     />
-//   </div>
-// }
 
 const App = () => {
-  return (<>
-  <PageHeader />
-  <FilterRow />
-  <Table />
+  const [modalState, setModalState] = useState(false, );
+  return (
+  <>
+    <PageHeader/>
+    <FilterRow />
+    <Table openModal={() => setModalState(!modalState)} />
+    {modalState ? (
+      <ModalCard
+        // getModal={modalState}
+        handleClickCloseModal={() => setModalState(!modalState)}
+        handleClickcloseModalOutside={() => setModalState(!modalState)}
+      />
+    ) : null} 
   </>
-  )
+  );
 }
 
 export default App;

@@ -1,26 +1,30 @@
 import {
     TableDataRow,
-    TableData
+    TableData,
+    ScrollCustom    
 } from "../../index"
 
 import styles from "./TableBody.module.css";
 
 export const TableBody = () => {
-    const tableRow = TableData.map(i => <TableDataRow  
+    const tableRow = TableData.map(i => <TableDataRow
         checked={i.checked}
         number={i.number}
         date={i.date}
+        time={i.time}
         productStatus={i.productStatus}
         positions={i.positions}
-        price={i.price}
-        clientName={i.clientName} />
+        totalPrice={i.totalPrice}
+        clientName={i.clientName}
+        color={i.color}
+        icon={i.icon}
+        textGreen={i.textGreen}
+        opacity={i.opacity}
+    />
     );
     return (
         <div className={styles.tableBody}>
-            <div className={styles.scroll}>
-                <div className={styles.scrollBody}></div>
-                <div className={styles.scrollRoad}></div>
-            </div>
+            <ScrollCustom />
             {tableRow}
         </div>
     )
