@@ -71,6 +71,7 @@ export const FilterRowBottomStatus = ({
     return (
         <div className={styles.inputStatus}>
             <Input
+             onChange={() => {}}
             topText={"Статус заказа"}
             value={"Любой"}
             // isButton6={true}

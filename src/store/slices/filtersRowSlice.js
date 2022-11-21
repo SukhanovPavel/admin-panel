@@ -24,6 +24,9 @@ export const filtersRowSlice = createSlice({
     },
 
     reducers: {
+        clearSearchValue : ( state ) => {
+            state.searchValue = '';
+        },
         setSearchValue : ( state, { payload } ) => {
             state.searchValue = payload.text;
         },
@@ -49,6 +52,7 @@ export const filtersRowSlice = createSlice({
 })
 
 export const {
+    clearSearchValue,
     setSearchValue,
     setOpenFiltersButton,
     setClearFilters,

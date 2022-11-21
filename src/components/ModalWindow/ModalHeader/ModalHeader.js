@@ -1,5 +1,5 @@
+import {useSelector} from 'react-redux';
 import {
-    TableData,
     Button,
     TitleText
 } from '../../index';
@@ -12,10 +12,11 @@ import styles from './ModalHeader.module.css';
 export const ModalHeader = ({
     handleClickCloseModal
 }) => {
+    const orders = useSelector(state => state.orders);
     return (
         <div className={styles.modalHeader}>
             <TitleText
-                title={`Заявка #${TableData[1].number}`} 
+                title={`Заявка #${orders.length ? orders[1].number : ''}`}
                 colorBlue={true} 
             />
             <Button

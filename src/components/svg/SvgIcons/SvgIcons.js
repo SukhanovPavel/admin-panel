@@ -1,5 +1,4 @@
 import { 
-    Abort,
     Bin,
     Checkmark,
     Dot,
@@ -36,7 +35,7 @@ export const ICON_NAME = {
 
 export const SvgIcons = ({ icon, color }) => {
     switch (icon) {
-        case 'Abort': return <Abort stroke={color} /> ;
+        case 'Abort': return <Abort style={{stroke: color}} /> ;
         
         case 'Bin': return <Bin color={color} /> ;
         

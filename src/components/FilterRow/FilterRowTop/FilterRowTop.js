@@ -1,10 +1,11 @@
+import { toggleIsOpenFilter } from '../../../store/slices/viewSlice';
 import { Button, Input, Search, } from "../../index";
 import {
   BUTTON_COLOR as button,
   BUTTON_SIZE as size,
 } from "../../Button/Button";
 import { useSelector, useDispatch } from 'react-redux';                      ////redux
-import { setSearchValue, setOpenFiltersButton } from "../../../store/slices/filtersRowSlice";
+import { clearSearchValue, setSearchValue } from "../../../store/slices/filtersRowSlice";
 import styles from "./FilterRowTop.module.css";
 
 export const FilterRowTop = ({
@@ -15,6 +16,7 @@ export const FilterRowTop = ({
   handleClickClearFilters,
 }) => {
   const searchValue = useSelector(state => state.filtersRow.searchValue);          ////redux
+    const isLoading = useSelector(state => state.view.isLoading);          ////redux
   const dispatch = useDispatch();
   
   const handleChange = ({ target: { value } }) => {
@@ -25,10 +27,12 @@ export const FilterRowTop = ({
   }
 
   const handleClickClearInput = () => {
-    const action = setSearchValue({
-      text: ''
-    })
+    const action = clearSearchValue()
     dispatch(action);
+  }
+
+  const handleFilterButtonClick = () => {
+      dispatch(toggleIsOpenFilter())
   }
 
   return (
@@ -38,7 +42,7 @@ export const FilterRowTop = ({
             span={<Search color={"#459DF5"} />}
             value={searchValue}  
             placeholder={"Номер заказа или ФИО"}
-            onChange={ handleChange }
+            onChange={handleChange}
             children={
               searchValue? ( 
                 <Button
@@ -56,20 +60,21 @@ export const FilterRowTop = ({
             text={"Фильтры"}
             icon={"Filter"}
             iconColor={"white"}
-            handleClick={ () => dispatch(setOpenFiltersButton()) }
+            handleClick={handleFilterButtonClick}
           />
           <Button
             text={"Сбросить фильтры"}
             handleClick={handleClickClearFilters}
           />
       </div>
+        {isLoading &&
       <Button
         color={button.blueText}
         size={size.large}
         text={"Загрузка"}
         icon={"Refresh"}
         iconColor={"#459DF5"}
-      />
+      />}
     </div>
   );
 };

@@ -37,7 +37,6 @@ import { SvgIcons } from "./svg/SvgIcons/SvgIcons";
 import { Table } from "./Table/Table";
 import { TableBody } from "./Table/TableBody/TableBody";
 import { TableColumnNames } from "./Table/TableHeader/TableColumnNames/TableColumnNames";
-import { TableData } from "../data/Data";
 import { TableDataRow } from "./Table/TableBody/TableDataRow/TableDataRow";
 import { TableFooter } from "./Table/TableFooter/TableFooter";
 import { TableHeader } from "./Table/TableHeader/TableHeader";
@@ -85,7 +84,6 @@ export {
     Table,
     TableBody,
     TableColumnNames,
-    TableData,
     TableDataRow,
     TableFooter,
     TableHeader,
