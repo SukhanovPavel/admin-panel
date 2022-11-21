@@ -8,10 +8,8 @@ export const filtersRowSlice = createSlice({
         searchValue: '',
         openFiltersButton: false,
         clearFilters: '',  // add /////////////
-        dateInputValue: {
-            from: '',
-            to: '',
-        },
+        dateInputValueFrom: '',
+        dateInputValueTo: '',
         orderStatus: {
             Новый: false,
             Рассчет: false,
@@ -20,33 +18,31 @@ export const filtersRowSlice = createSlice({
             Выполнен: false,
             Отменен: false,
         },
-        orderPrice: {
-            from: '',
-            to: '',
-        },
+        orderPriceFrom: '',
+        orderPriceTo: '',
         applyFiltersButton: '' // add ////////////
     },
 
     reducers: {
-        setSearchValue: ( state, x ) => { 
-            state.searchValue += x
+        setSearchValue : ( state, { payload } ) => {
+            state.searchValue = payload.text;
         },
         setOpenFiltersButton: state => {
             return !state.openFiltersButton
         },
         setClearFilters: () => {}, //add func ///////////
-        setDateInputValueFrom: ( state, event ) => { 
-            state.dateInputValue.from = event.target.value
+        setDateInputValueFrom: ( state, { payload } ) => { 
+            state.dateInputValueFrom = payload.text;
         },
-        setDateInputValueTo: ( state, event ) => { 
-            state.dateInputValue.to = event.target.value
+        setDateInputValueTo: ( state, { payload } ) => { 
+            state.dateInputValueTo = payload.text
         },
         setOrderStatus: () => {}, //add ///////////
-        setOrderPriceFrom: ( state, event ) => { 
-                state.orderPrice.from = event.target.value
+        setOrderPriceFrom: ( state, { payload } ) => { 
+                state.orderPriceFrom = payload.text
         },
-        setOrderPriceTo: ( state, event ) => { 
-                state.orderPrice.to = event.target.value
+        setOrderPriceTo: ( state, { payload } ) => { 
+                state.orderPriceTo = payload.text
         },
         setApplyFiltersButton: () => {}//add ///////////////
     }

@@ -3,35 +3,50 @@ import {
   BUTTON_COLOR as button,
   BUTTON_SIZE as size,
 } from "../../Button/Button";
-// import { useSelector, useDispatch } from 'react-redux';                      ////redux
-// import { setSearchValue } from "../../../store/slices/filtersRowSlice";
+import { useSelector, useDispatch } from 'react-redux';                      ////redux
+import { setSearchValue, setOpenFiltersButton } from "../../../store/slices/filtersRowSlice";
 import styles from "./FilterRowTop.module.css";
 
 export const FilterRowTop = ({
-  handleClickFiltres,
-  onChange,
-  inputValue,
-  handleClickInput,
+  // handleClickFiltres,
+  // onChange,
+  // inputValue,
+  // handleClickInput,
   handleClickClearFilters,
 }) => {
-  // const value = useSelector(state => state.filtersRow.searchValue);          ////redux
-  // const dispatch = useDispatch();
+  const searchValue = useSelector(state => state.filtersRow.searchValue);          ////redux
+  const dispatch = useDispatch();
+  
+  const handleChange = ({ target: { value } }) => {
+    const action = setSearchValue({
+      text: value 
+    })
+    dispatch(action);
+  }
+
+  const handleClickClearInput = () => {
+    const action = setSearchValue({
+      text: ''
+    })
+    dispatch(action);
+  }
+
   return (
     <div className={styles.header}>
       <div className={styles.topInpContainer}>
           <Input
             span={<Search color={"#459DF5"} />}
-            value={inputValue}
+            value={searchValue}  
             placeholder={"Номер заказа или ФИО"}
-            onChange={ onChange }
+            onChange={ handleChange }
             children={
-              inputValue? ( 
+              searchValue? ( 
                 <Button
                   color={button.blueText}
                   size={size.large}
                   icon={"XMedium"}
                   iconColor={"#BAD8F5"}
-                  handleClick={handleClickInput}
+                  handleClick={handleClickClearInput}
                 />
               ) : null
             }
@@ -41,7 +56,7 @@ export const FilterRowTop = ({
             text={"Фильтры"}
             icon={"Filter"}
             iconColor={"white"}
-            handleClick={handleClickFiltres}
+            handleClick={ () => dispatch(setOpenFiltersButton()) }
           />
           <Button
             text={"Сбросить фильтры"}

@@ -1,12 +1,17 @@
 import { useState } from 'react';
+
 import { 
 FilterRowTop,
 FilterRowBottom
 } from '../index';
 
+import { useSelector } from 'react-redux';
+
 const dateI = new Date();
 
 export const FilterRow = () =>{
+
+    const openFilter = useSelector(state => state.filtersRow.openFilterButton); 
 
     let [inputValue, setInputValue] = useState("");
 
@@ -17,12 +22,7 @@ export const FilterRow = () =>{
       }.${dateI.getFullYear()}`);
     let [dateValueInputTwo, setDateValueInputTwo] = useState('');
 
-
-    // let [filter, setFilter] = useState(true);
-    // let [dateValueInputOne, setDateValueInputOne] = useState(`${dateI.getDate()}.${
-    //     dateI.getMonth() > 9 ? dateI.getMonth() : "0" + dateI.getMonth()
-    //   }.${dateI.getFullYear()}`);
-    // let [dateValueInputTwo, setDateValueInputTwo] = useState('');
+    const openFiltersButton = useSelector(store => store.filtersRow.openFiltersButton)
 
     return (
         <>
@@ -33,7 +33,9 @@ export const FilterRow = () =>{
             handleClickFiltres={ () => setFilter(!filter) }
             handleClickClearFilters={ () => setInputValue(inputValue = "") }
         />
-        { filter? 
+        { 
+        // filter? 
+        !openFiltersButton?
             <FilterRowBottom 
                 filterNone = { filter }
                 dateValueInputOne={ dateValueInputOne }

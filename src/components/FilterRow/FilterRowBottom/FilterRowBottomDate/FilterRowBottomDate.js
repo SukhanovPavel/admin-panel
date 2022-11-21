@@ -7,6 +7,9 @@ import {
   BUTTON_SIZE as size,
   BUTTON_COLOR as color
 } from "../../../Button/Button";
+import { useSelector, useDispatch } from 'react-redux';                      ////redux
+import { setDateInputValueFrom, setDateInputValueTo } from "../../../../store/slices/filtersRowSlice";
+
 import styles from "./FilterRowBottomDate.module.css";
 
 
@@ -19,7 +22,11 @@ export const FilterRowBottomDate = ({
   handleClickDateTwo,
   dateValueInputTwo
 }) => {
-  
+
+  const dateInputValueFrom = useSelector(store => store.filtersRow.dateInputValueFrom )
+  const dateInputValueTo = useSelector(store => store.filtersRow.dateInputValueTo )
+  const dispatch = useDispatch();
+
   return (
     
     <div className={styles.inputDate}>
@@ -27,32 +34,32 @@ export const FilterRowBottomDate = ({
         span={"с"}
         topText={"Дата оформления"}
         placeholder={"dd.mm.yyyy"}
-        value={dateValueInputOne}
-        onChange={ onChangeDateOne }
+        value={dateInputValueFrom}
+        onChange={ ({ target: { value } }) => dispatch(setDateInputValueFrom({ text: value })) }
         children={
-          dateValueInputOne?
+          dateInputValueFrom?
           <Button
             color={color.blueText}
             size={size.small}
             icon={"XMedium"}
             iconColor={"#BAD8F5"}
-            handleClick={handleClickDate}
+            handleClick={ () => dispatch(setDateInputValueFrom({ text: '' }) ) }
           /> 
           : null
         }
       />
       <Input
         span={"по"}
-        value={dateValueInputTwo}
+        value={dateInputValueTo}
         placeholder={"dd.mm.yyyy"}
-        onChange={ onChangeDateTwo}
+        onChange={ ({ target: { value } }) => dispatch(setDateInputValueTo({ text: value })) }
         children={
-          dateValueInputTwo? <Button
+          dateInputValueTo? <Button
             color={color.blueText}
             size={size.small}
             icon={"XMedium"}
             iconColor={"#BAD8F5"}
-            handleClick={handleClickDateTwo}
+            handleClick={ () => dispatch(setDateInputValueTo({ text: '' })) }
           /> : null
         }
       />
