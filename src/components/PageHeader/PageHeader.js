@@ -24,7 +24,7 @@ export const PageHeader = () => {
           icon={"Sun"}
           iconColor={"#459DF5"}
         />
-        {/* : <Button           ////  добавиить переключатель темы + в css везде
+        {/* : <Button           ////  добавить переключатель темы + в css везде
             size={size.large}
             color={color.blueText}
             text={"Темная тема"}

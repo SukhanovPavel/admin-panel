@@ -9,7 +9,7 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# Runtime data
+# Runtime mock
 pids
 *.pid
 *.seed
@@ -125,3 +125,5 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.idea/

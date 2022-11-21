@@ -1,5 +1,4 @@
 import { 
-    Abort,
     Bin,
     Checkmark,
     Dot,
@@ -15,7 +14,9 @@ import {
     XMedium
 } from "../../index";
 
-export const ICON_NAME = { 
+import { ReactComponent as Abort  } from '../../../assets/icons/abort.svg';
+
+export const ICON_NAME = {
     Abort: 'Abort',
     Bin: 'Bin',
     Checkmark: 'Checkmark',
@@ -34,7 +35,7 @@ export const ICON_NAME = {
 
 export const SvgIcons = ({ icon, color }) => {
     switch (icon) {
-        case 'Abort': return <Abort color={color} /> ;
+        case 'Abort': return <Abort style={{stroke: color}} /> ;
         
         case 'Bin': return <Bin color={color} /> ;
         

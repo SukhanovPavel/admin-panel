@@ -1,6 +1,6 @@
+import { useSelector } from 'react-redux';
 import {
     Input,
-    TableData,
     Button,
     ModalTable,
     ScrollCustom,
@@ -13,27 +13,28 @@ import styles from './ModalMain.module.css';
 
 
 export const ModalMain = () => {
+    const orders = useSelector(state => state.orders);
     return (
         <div className={styles.modalMain}>
             <ScrollCustom />
             <Input
                 topText={"Дата и время заказа"}
                 isLock={true}
-                value={TableData[1].date}
+                value={orders.length ? orders[1].date : ''}
             />
             <Input
                 topText={"ФИО покупателя"}
-                value={TableData[1].clientName}
+                value={orders.length ? orders[1].clientName : ''}
             />
             <ModalTable />
             <Input 
                 topText={"Уровень лояльности"}
-                value={TableData[1].loyalty}
+                value={orders.length ? orders[1].loyalty : ''}
                 isLock={true}    
             />
             <Input
                 topText={"Статус заказа"}
-                value={TableData[1].productStatus}
+                value={orders.length ? orders[1].productStatus : ''}
                 children={
                     <Button
                         size={size.small}

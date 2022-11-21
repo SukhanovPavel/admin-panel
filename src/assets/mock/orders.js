@@ -1,5 +1,5 @@
 
-export const TableData = [
+export const orders = [
     {
         id: 1,
         checked: false,
