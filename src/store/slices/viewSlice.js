@@ -7,6 +7,8 @@ export const viewSlice = createSlice({
     initialState: {
         isFiltersOpen: false,
         isLoading: false,
+        isModalOpen: false,
+        isDeleteDropDownOpen: false,
     },
 
     reducers: {
@@ -16,12 +18,17 @@ export const viewSlice = createSlice({
         setIsLoading : ( state, { payload } ) => {
             state.isLoading = payload;
         },
+        setIsModalOpen : ( state, { payload } ) => {
+            state.isModalOpen = payload;
+        },
+        setisDeleteDropDownOpen
     }
 })
 
 export const {
     toggleIsOpenFilter,
     setIsLoading,
+    setIsModalOpen
 } = viewSlice.actions;
 
 export default viewSlice.reducer;

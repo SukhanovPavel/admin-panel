@@ -1,3 +1,5 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { setOrderPriceFrom, setOrderPriceTo } from '../../../../store/slices/filtersRowSlice';
 import {
     Input,
     Button
@@ -9,15 +11,19 @@ import {
 import styles from "./FilterRowBottomPrice.module.css";
 
 export const FilterRowBottomPrice = () => {
+  const orderPriceFrom = useSelector(state => state.filtersRow.orderPriceFrom);
+  const orderPriceTo = useSelector(state => state.filtersRow.orderPriceTo);
+  const dispatch = useDispatch();
     return (
       <div className={styles.inputPrice}>
         <Input
           topText={"Сумма заказа"}
           span={"от"}
-          onChange={() => {}}
-          value={"5000"}
+          onChange={({ target: { value } }) => dispatch(setOrderPriceFrom({text: value}))}
+          value={orderPriceFrom}
           children={
             <Button
+            handleClick={({ target: { value } }) => dispatch(setOrderPriceFrom({text: ""}))}
               size={size.small}
               color={color.blueText}
               icon={"XMedium"}
@@ -28,10 +34,11 @@ export const FilterRowBottomPrice = () => {
         <Input
           span={"до"}
           placeholder={"₽"}
-          onChange={() => {}}
-          value={''}
+          onChange={({ target: { value } }) => dispatch(setOrderPriceTo({text: value}))}
+          value={orderPriceTo}
           children={
             <Button
+              handleClick={({ target: { value } }) => dispatch(setOrderPriceTo({text: ""}))}
               size={size.small}
               color={color.blueText}
               icon={"XMedium"}

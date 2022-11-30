@@ -11,12 +11,12 @@ export const filtersRowSlice = createSlice({
         dateInputValueFrom: '',
         dateInputValueTo: '',
         orderStatus: {
-            Новый: false,
-            Рассчет: false,
-            Подтвержден: false,
-            Отложен : false,
-            Выполнен: false,
-            Отменен: false,
+            new: false,
+            calculation: false,
+            confirmed: false,
+            postponed : false,
+            completed: false,
+            cancelled: false,
         },
         orderPriceFrom: '',
         orderPriceTo: '',
@@ -40,7 +40,26 @@ export const filtersRowSlice = createSlice({
         setDateInputValueTo: ( state, { payload } ) => { 
             state.dateInputValueTo = payload.text
         },
-        setOrderStatus: () => {}, //add ///////////
+        setOrderStatus: {
+            new: state => {
+                return !state.orderStatus.new
+            },
+            calculation: state => {
+                return !state.orderStatus.calculation
+            },
+            confirmed: state => {
+                return !state.orderStatus.confirmed
+            },
+            postponed: state => {
+                return !state.orderStatus.postponed
+            },
+            completed: state => {
+                return !state.orderStatus.completed
+            },
+            cancelled: state => {
+                return !state.orderStatus.cancelled
+            }, 
+        },
         setOrderPriceFrom: ( state, { payload } ) => { 
                 state.orderPriceFrom = payload.text
         },

@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect,  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setOrders } from '../../store/slices/ordersSlice';
-import { setIsLoading } from '../../store/slices/viewSlice';
+import { setIsLoading, setIsModalOpen } from '../../store/slices/viewSlice';
 import {
   PageHeader,
   FilterRow,
@@ -12,16 +12,16 @@ import {
 import { orders as initialOrders } from '../../assets/mock/orders';
 
 const App = () => {
-  const [modalState, setModalState] = useState(false, );
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const orders = useSelector(state => state.orders);
+  const isModalOpen = useSelector(state => state.view.isModalOpen);
 
   useEffect(() => {
     dispatch(setIsLoading(true));
     setTimeout(() => {
       dispatch(setOrders(initialOrders));
-    }, Math.floor(Math.random() * 3000 + 2000)); // 2-5 сек
+    }, Math.floor(Math.random() * 500)); 
   }, [dispatch]);
 
   useEffect(() => {
@@ -34,14 +34,13 @@ const App = () => {
   <>
     <PageHeader/>
     <FilterRow />
-    <Table openModal={() => setModalState(!modalState)} />
-    {modalState ? (
+    <Table openModal={ () => dispatch(setIsModalOpen(true)) } />
+    {isModalOpen && (
       <ModalCard
-        // getModal={modalState}
-        handleClickCloseModal={() => setModalState(!modalState)}
-        handleClickcloseModalOutside={() => setModalState(!modalState)}
+        handleClickCloseModal={() => dispatch(setIsModalOpen(false))}
+        handleClickcloseModalOutside={() => dispatch(setIsModalOpen(false))}
       />
-    ) : null} 
+    )} 
   </>
   );
 }

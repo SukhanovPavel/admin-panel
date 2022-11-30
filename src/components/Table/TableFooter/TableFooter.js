@@ -21,7 +21,7 @@ export const TableFooter = ({
                     <span>Выбрано записей: 5</span>
                 </div>
                 <Button
-                    handleClick={openModal}
+                    handleClick={ openModal }
                     size={size.small}
                     icon={"Pencil"}
                     iconColor={"white"}

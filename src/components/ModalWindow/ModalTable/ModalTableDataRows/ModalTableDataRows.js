@@ -1,9 +1,8 @@
 import {
     ModalDataRow,
 } from '../../../index';
-const orders = [{
-    productDetails: []
-}];
+import { orders } from '../../../../assets/mock/orders';
+
 export const ModalTableDataRows = () => orders[1].productDetails.map(i => <ModalDataRow
         article={i.article}
         productName={i.productName}
