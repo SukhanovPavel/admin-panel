@@ -20,7 +20,7 @@ export const FilterRowBottom = ({
   dateValueInputTwo
 }) => {
   return (
-    <div className={styles.filterBottom}>
+    <div className={styles.filterBottom} id="filters">
       <FilterRowBottomDate 
         onChangeDateOne={onChangeDateOne}
         onChangeDateTwo={onChangeDateTwo}

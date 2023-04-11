@@ -14,6 +14,7 @@ export const Checkbox = ({
 
     return (
       <div
+        id="check"
         className={blockStyle}
         onClick={handleCheckboxClick}
         >

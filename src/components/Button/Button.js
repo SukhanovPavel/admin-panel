@@ -38,16 +38,16 @@ export const Button = ({
         })
 
     return (
-        <div 
+        <button
             className={ buttonClass }
             onClick={ handleClick }
         >
             { children }
-            { icon? <SvgIcons
+            <div className={icon === "Refresh" ? styles.icon360 : null}>{ icon? <SvgIcons
                 icon={icon}
                 color={iconColor}
-            /> : null }
+            /> : null }</div>
             { text }
-        </div>
+        </button>
     )
 }

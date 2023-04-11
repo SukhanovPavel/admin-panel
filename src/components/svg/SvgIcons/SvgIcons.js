@@ -15,6 +15,7 @@ import {
 } from "../../index";
 
 import { ReactComponent as Abort  } from '../../../assets/icons/abort.svg';
+import styles from "../../Button/Button.module.css";
 
 export const ICON_NAME = {
     Abort: 'Abort',
@@ -63,6 +64,6 @@ export const SvgIcons = ({ icon, color }) => {
         
         case 'XMedium': return <XMedium color={color} /> ;
         
-        default: <></>;
+        default: return <></>;
     }
 }

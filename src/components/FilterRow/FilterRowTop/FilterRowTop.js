@@ -67,14 +67,13 @@ export const FilterRowTop = ({
             handleClick={handleClickClearFilters}
           />
       </div>
-        {isLoading &&
-      <Button
-        color={button.blueText}
-        size={size.large}
-        text={"Загрузка"}
-        icon={"Refresh"}
-        iconColor={"#459DF5"}
-      />}
+        {isLoading && <Button
+                        color={button.blueText}
+                        size={size.large}
+                        text={"Загрузка"}
+                        icon={"Refresh"}
+                        iconColor={"#459DF5"}
+                      />}
     </div>
   );
 };

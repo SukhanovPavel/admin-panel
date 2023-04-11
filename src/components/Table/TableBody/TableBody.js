@@ -27,7 +27,6 @@ export const TableBody = () => {
     );
     return (
         <div className={styles.tableBody}>
-            <ScrollCustom />
             {tableRow}
         </div>
     )

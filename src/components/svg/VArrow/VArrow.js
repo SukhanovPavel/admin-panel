@@ -7,7 +7,7 @@ export const VArrow = ({ color }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" fill={color} />
+        <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" fill="currentColor" />
       </svg>
     );
 }

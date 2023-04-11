@@ -1,22 +1,22 @@
-._ {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 16px;
-    white-space: nowrap;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: none;
-    background: #459DF5;
-    border-radius: 4px;
-}
+/*._ {*/
+/*    font-family: 'Ubuntu';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-size: 13px;*/
+/*    line-height: 16px;*/
+/*    white-space: nowrap;*/
+/*    cursor: pointer;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    background: #459DF5;*/
+/*    border-radius: 4px;*/
+/*}*/
 .colorTextBlue {
     background: none;
-    color: #459DF5;
+    color: #459DF5!important;
 }
 .colorTextBlack {
     background: none;
@@ -34,4 +34,22 @@
     height: 32px;
     padding: 8px 16px;
     gap: 8px;
+}
+.icon360 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: rotation;
+    animation-duration:0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+.dark-mode ._ {
+    color: black;
 }

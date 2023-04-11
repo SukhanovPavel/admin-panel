@@ -7,7 +7,7 @@ export const Filter = ({ color }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M12 4H4V5.5L7 8.5V12L9 13V8.5L12 5.5V4Z" fill={color} />
+      <path d="M12 4H4V5.5L7 8.5V12L9 13V8.5L12 5.5V4Z" fill="currentColor" />
     </svg>
   );
 }

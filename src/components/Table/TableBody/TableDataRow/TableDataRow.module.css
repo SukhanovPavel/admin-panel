@@ -11,7 +11,7 @@
     border-bottom: 1px solid #EBF0F5;
 }
 .silver {
-    background: #EBF0F5;
+    background: rgb(220, 220, 220, 0.5);
 }
 .check {
     width: 32px;
