@@ -1,7 +1,7 @@
-import { 
+import {
     Checkbox,
     TableColumnNames,
-    Button
+    Button, SvgIcons
 } from "../../index"
 import {
     BUTTON_SIZE as size,
@@ -12,7 +12,7 @@ import styles from "./TableHeader.module.css";
 export const TableHeader = () => {
 
     return (
-        <div className={styles.tableHeader}>
+        <div className={styles.tableHeader} id="tableHeader">
             <div className={styles.columnCheck}>
                 <TableColumnNames
                     span={<Checkbox />}
@@ -20,16 +20,17 @@ export const TableHeader = () => {
             </div>
             <div className={styles.columnNumber}>
                 <TableColumnNames
-                    span={"#"}
+                    span="#"
                 />
             </div>
             <div className={styles.columnDate}>
                 <TableColumnNames
-                    span={"Дата"}
-                    children={<Button
+                    span="Дата"
+                    children={
+                    <Button
                         icon={"VArrow"}
                         size={size.small}
-                        color={color.blueText}
+                        // color={color.blueText}
                         iconColor={"white"}
                     />}
                 />
@@ -37,10 +38,11 @@ export const TableHeader = () => {
             <div className={styles.columnStatus}>
                 <TableColumnNames
                     span={"Статус"}
-                    children={<Button
+                    children={
+                    <Button
                         icon={"VArrow"}
                         size={size.small}
-                        color={color.blueText}
+                        // color={color.blueText}
                         iconColor={"white"}
                     />}
                 />
@@ -51,8 +53,8 @@ export const TableHeader = () => {
                     children={<Button
                         icon={"VArrow"}
                         size={size.small}
-                        color={color.blueText}
-                        iconColor={"white"}
+                        // color={color.blueText}
+                        // iconColor={"white"}
                     />}
                 />
             </div>
@@ -62,7 +64,7 @@ export const TableHeader = () => {
                     children={<Button
                         icon={"VArrow"}
                         size={size.small}
-                        color={color.blueText}
+                        // color={color.blueText}
                         iconColor={"white"}
                     />}
                 />

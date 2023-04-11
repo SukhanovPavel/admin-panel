@@ -14,6 +14,7 @@ export const FilterRowBottomPrice = () => {
         <Input
           topText={"Сумма заказа"}
           span={"от"}
+          onChange={() => {}}
           value={"5000"}
           children={
             <Button
@@ -27,6 +28,8 @@ export const FilterRowBottomPrice = () => {
         <Input
           span={"до"}
           placeholder={"₽"}
+          onChange={() => {}}
+          value={''}
           children={
             <Button
               size={size.small}

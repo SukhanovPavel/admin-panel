@@ -7,7 +7,7 @@ export const Sun = ({ color }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_162_54)">
+      <g clipPath="url(#clip0_162_54)">
         <circle cx="8" cy="8" r="4" fill={ color } />
         <path d="M15 9L16 8L15 7H13V9H15Z" fill={ color } />
         <path d="M1 9L0 8L1 7H3V9H1Z" fill={ color } />

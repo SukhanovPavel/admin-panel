@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light dark;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  background: #459DF5;
+  border-radius: 4px;
+}
+
+.dark-mode body {
+  background: #2B2D33;
+  color: #BCC4CC;
+}
+.dark-mode button {
+  color: #2B2D33;
+}
+.dark-mode checkbox {
+  background: #2B2D33;
+}
+.dark-mode #filters {
+  background: #171B1F;
+}
+.dark-mode input {
+  color: #BCC4CC;
+}
+.dark-mode input::placeholder {
+  color: #454E52;
+}
+.dark-mode #tableHeader span {
+  color: #2B2D33!important;
+}
+.dark-mode #tableRow {
+  border-bottom: 1px solid #171B1F;
+}
+.dark-mode #check {
+  background: #2B2D33;
+}
+.dark-mode #tableFooter {
+  background: #171B1F;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #2B2D33;
+    color: #BCC4CC;
+  }
+  button {
+    color: #2B2D33;
+  }
+  checkbox {
+    background: #2B2D33;
+  }
+  #filters {
+    background: #171B1F;
+  }
+  input {
+    color: #BCC4CC;
+  }
+  input::placeholder {
+    color: #454E52;
+  }
+  #tableHeader span {
+    color: #2B2D33!important;
+  }
+  #tableRow {
+    border-bottom: 1px solid #171B1F;
+  }
+  #check {
+    background: #2B2D33;
+  }
+  #tableFooter {
+    background: #171B1F;
+  }
+}
+

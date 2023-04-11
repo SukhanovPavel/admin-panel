@@ -1,12 +1,17 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import { 
-FilterRowTop,
-FilterRowBottom
+    FilterRowTop,
+    FilterRowBottom
 } from '../index';
+
+import { getIsFiltersOpen } from '../../store/selectors/view'
 
 const dateI = new Date();
 
 export const FilterRow = () =>{
+
 
     let [inputValue, setInputValue] = useState("");
 
@@ -17,12 +22,7 @@ export const FilterRow = () =>{
       }.${dateI.getFullYear()}`);
     let [dateValueInputTwo, setDateValueInputTwo] = useState('');
 
-
-    // let [filter, setFilter] = useState(true);
-    // let [dateValueInputOne, setDateValueInputOne] = useState(`${dateI.getDate()}.${
-    //     dateI.getMonth() > 9 ? dateI.getMonth() : "0" + dateI.getMonth()
-    //   }.${dateI.getFullYear()}`);
-    // let [dateValueInputTwo, setDateValueInputTwo] = useState('');
+    const isFiltersOpen = useSelector(getIsFiltersOpen)
 
     return (
         <>
@@ -33,7 +33,8 @@ export const FilterRow = () =>{
             handleClickFiltres={ () => setFilter(!filter) }
             handleClickClearFilters={ () => setInputValue(inputValue = "") }
         />
-        { filter? 
+
+        {isFiltersOpen &&
             <FilterRowBottom 
                 filterNone = { filter }
                 dateValueInputOne={ dateValueInputOne }
@@ -42,8 +43,8 @@ export const FilterRow = () =>{
                 handleClickDateTwo={ () => setDateValueInputTwo(dateValueInputTwo="") }
                 onChangeDateOne={ (event) => setDateValueInputOne(dateValueInputOne = event.target.value) }
                 onChangeDateTwo={ (event) => setDateValueInputTwo(dateValueInputTwo = event.target.value) }
-        /> 
-        : null }
+            />
+        }
         </>
     )
 }

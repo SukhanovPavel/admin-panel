@@ -15,7 +15,7 @@ export const TableFooter = ({
 }) => {
     
     return (
-        <div className={styles.tableFooter}>
+        <div id="tableFooter" className={styles.tableFooter}>
             <div className={styles.footerButtons}>
                 <div className={styles.selected}>
                     <span>Выбрано записей: 5</span>

@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import { SvgIcons } from '../index';
-import { ICON_NAME as icon } from '../Svg/SvgIcons/SvgIcons';
+import { ICON_NAME as icon } from '../svg/SvgIcons/SvgIcons';
 import styles from './Checkbox.module.css';
 
 export const Checkbox = ({
@@ -14,6 +14,7 @@ export const Checkbox = ({
 
     return (
       <div
+        id="check"
         className={blockStyle}
         onClick={handleCheckboxClick}
         >

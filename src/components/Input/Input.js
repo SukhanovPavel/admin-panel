@@ -9,6 +9,8 @@ import {
 import styles from './Input.module.css';
 
 export const Input = ({
+  onKeyDown,
+  ref,
   isErr,
   isLock,
   topText = "",
@@ -40,6 +42,8 @@ export const Input = ({
       <div className={inputStyles}>
         <span>{span}</span>
         <input
+          onKeyDown={onKeyDown}
+          ref={ref}
           className={styles.inp}
           type={inputType}
           placeholder={placeholder}

@@ -24,11 +24,12 @@ export const TableDataRow = ({
     textGreen,
     opacity
 }) => {
+
     const rowStyle = cx(styles.tableDataRow, {
         [styles.silver]: checked
     })
     return (
-        <div className={rowStyle}>
+        <div className={rowStyle} id="tableRow">
             <div className={styles.check}><Checkbox checked={checked}/></div>
             <div className={styles.orderNumber}>{number}</div>
             <div className={styles.orderDate}>{date}, {time}</div>
