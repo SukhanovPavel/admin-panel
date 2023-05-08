@@ -3,7 +3,7 @@ import {
     Input,
     Button,
     ModalTable,
-    ScrollCustom,
+    // ScrollCustom,
 } from '../../index';
 import {
     BUTTON_SIZE as size,
@@ -16,7 +16,7 @@ export const ModalMain = () => {
     const orders = useSelector(state => state.orders);
     return (
         <div className={styles.modalMain}>
-            <ScrollCustom />
+            {/*<ScrollCustom />*/}
             <Input
                 topText={"Дата и время заказа"}
                 isLock={true}

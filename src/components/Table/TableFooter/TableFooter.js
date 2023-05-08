@@ -8,17 +8,25 @@ import {
     BUTTON_SIZE as size,
     BUTTON_COLOR as buttonColor
 } from "../../Button/Button";
+import {deleteOrders} from "../../../store/slices/ordersSlice";
+
+
 import styles from "./TableFooter.module.css";
+import {useDispatch, useSelector} from "react-redux";
 
 export const TableFooter = ({
     openModal
 }) => {
+
+    const orders = useSelector(state => state.orders);
+    const forCount = [...orders];
+    const count = forCount.filter(item => item.checked).length
     
     return (
         <div id="tableFooter" className={styles.tableFooter}>
             <div className={styles.footerButtons}>
                 <div className={styles.selected}>
-                    <span>Выбрано записей: 5</span>
+                    <span>Выбрано записей: {count}</span>
                 </div>
                 <Button
                     handleClick={openModal}
@@ -30,7 +38,7 @@ export const TableFooter = ({
                 {/* { closeDD? <DeleteDD isOpen={closeDD} handleClick={openDD}/> : null } */}
 
                 
-                <DeleteButtonContainer className={styles.deleteButton}/>
+                <DeleteButtonContainer className={styles.deleteButton} count={count}/>
 
             </div>
             <div className={styles.pagination}>
@@ -68,29 +76,39 @@ export const TableFooter = ({
     )
 }
 
-export const DeleteButtonContainer = () => {
+export const DeleteButtonContainer = ({count}) => {
     const [ closeDD, openDD ] = useState(false);
-    const buttonsDD = [
-        {
-            name: "Удалить",
-            size: size.small,
-            color: buttonColor.blueText
-        },
-        {
-            name: "Отмена",
-            size: size.small,
-            handleClick: ()  => openDD(false)
-        },
-    ]
+
+    const dispatch = useDispatch();
+
+    const title = `Удалить ${count} записи(ей)?`
+
     return (
         <div className={styles.deleteButton}>
             {/* { closeDD? <DeleteDD isOpen={closeDD} handleClick={openDD}/> : null } */}
-            {closeDD?  <div className={styles.posAbsolute}>
-                <Dropdowns 
-                    title={'Удалить n записей'}
-                    arr={buttonsDD}
-                /> 
-                </div> : null }
+            {closeDD &&
+                <div className={styles.posAbsolute}>
+                    <Dropdowns
+                        title={title}
+                    >
+                        <Button
+                            widthMarg
+                            size={size.small}
+                            color={buttonColor.blueText}
+                            text={"Удалить"}
+                            handleClick={() => {
+                                dispatch(deleteOrders());
+                                openDD(false);
+                            }}
+                        />
+                        <Button
+                            widthMarg
+                            size={size.small}
+                            handleClick={ () => openDD(false) }
+                            text={"Отмена"}
+                        />
+                    </Dropdowns>
+                </div> }
             <Button
                 size={size.small}
                 color={buttonColor.red}
@@ -99,7 +117,7 @@ export const DeleteButtonContainer = () => {
                 iconColor={"white"}
                 text={"Удалить"}
             />
-            
+
         </div>
     )
 }

@@ -17,9 +17,20 @@
     z-index: 1;
     position: absolute;
     right: 0px;
-    bottom: -200px;
+    bottom: -210px;
 }
 .mixDD {
     align-items: flex-start;
 }
 .noneDD {display: none;}
+
+.flexStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    padding: 8px 16px;
+}
+.colorBlue {
+    color: #459DF5;
+}

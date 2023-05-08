@@ -2,76 +2,63 @@ import {
     Checkbox,
     TableColumnNames,
     Button, SvgIcons
-} from "../../index"
+} from "../../index";
+import {ReactComponent as V} from "../../svg/SVGfiles/v_arrow.svg";
 import {
     BUTTON_SIZE as size,
     BUTTON_COLOR as color
 } from "../../Button/Button";
+import {checkAll} from "../../../store/slices/ordersSlice";
+import {useDispatch} from "react-redux";
 import styles from "./TableHeader.module.css";
 
-export const TableHeader = () => {
+export const TableHeader = ({handleFilterProduct}) => {
+
+    const dispatch = useDispatch();
 
     return (
         <div className={styles.tableHeader} id="tableHeader">
             <div className={styles.columnCheck}>
                 <TableColumnNames
-                    span={<Checkbox />}
+                    title={<Checkbox handleCheckboxClick={() => dispatch(checkAll())} />}
                 />
             </div>
             <div className={styles.columnNumber}>
                 <TableColumnNames
-                    span="#"
+                    title="#"
                 />
             </div>
             <div className={styles.columnDate}>
                 <TableColumnNames
-                    span="Дата"
-                    children={
-                    <Button
-                        icon={"VArrow"}
-                        size={size.small}
-                        // color={color.blueText}
-                        iconColor={"white"}
-                    />}
+                    handleClick={() => dispatch(handleFilterProduct("date"))}
+                    title="Дата"
+                    children={<V/>}
                 />
             </div>
             <div className={styles.columnStatus}>
                 <TableColumnNames
-                    span={"Статус"}
-                    children={
-                    <Button
-                        icon={"VArrow"}
-                        size={size.small}
-                        // color={color.blueText}
-                        iconColor={"white"}
-                    />}
+                    handleClick={() => dispatch(handleFilterProduct("productStatus"))}
+                    title="Статус"
+                    children={<V/>}
                 />
             </div>
             <div className={styles.columnPos}>
                 <TableColumnNames
-                    span={"Позиций"}
-                    children={<Button
-                        icon={"VArrow"}
-                        size={size.small}
-                        // color={color.blueText}
-                        // iconColor={"white"}
-                    />}
+                    handleClick={() => dispatch(handleFilterProduct("positions"))}
+                    title="Позиций"
+                    children={<V/>}
                 />
             </div>
             <div className={styles.columnPrice}>
                 <TableColumnNames
-                    span={"Сумма"}
-                    children={<Button
-                        icon={"VArrow"}
-                        size={size.small}
-                        // color={color.blueText}
-                        iconColor={"white"}
-                    />}
+                    handleClick={() => dispatch(handleFilterProduct("totalPrice"))}
+                    title="Сумма"
+                    children={<V/>}
                 />
             </div>
             <div className={styles.columnClientName}>
                 <TableColumnNames
-                    span={"ФИО покупателя"}
+                    title="ФИО покупателя"
                 />
             </div>
         </div>

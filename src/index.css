@@ -97,5 +97,9 @@ button {
   #tableFooter {
     background: #171B1F;
   }
+  #dropdown {
+    background: #2B2D33;
+    color: #BCC4CC;
+  }
 }
 

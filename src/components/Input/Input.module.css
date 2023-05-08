@@ -36,7 +36,7 @@ input ::placeholder {
     border-radius: 4px;
 }
 .inputFormError {
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
     border: 1px solid #F53152;
 }
 .inputFormLock {

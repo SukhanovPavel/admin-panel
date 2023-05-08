@@ -43,6 +43,18 @@
     width: 176px;
     height: 40px;
 }
+.greenStatus {
+    color: #0FB864;
+}
+.grayStatus {
+    color: rgb(100, 100, 100, 0.9);
+}
+.orangeIcon {
+    color: #FF8C56;
+}
+.blueIcon {
+    color: #459DF5;
+}
 .numOfProducts {
     display: flex;
     flex-direction: row;

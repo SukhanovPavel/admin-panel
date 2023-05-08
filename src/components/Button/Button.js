@@ -24,6 +24,7 @@ export const Button = ({
     text,
     color,
     size=BUTTON_SIZE.large,
+    widthMarg = false,
     children
 }) => {
 
@@ -32,6 +33,7 @@ export const Button = ({
             [styles.colorTextBlue]: color === BUTTON_COLOR.blueText,
             [styles.colorRed]: color === BUTTON_COLOR.red,
             [styles.colorTextBlack]: color === BUTTON_COLOR.blackText,
+            [styles.widthMarg]: widthMarg,
 
             [styles.sizeSmall]: size === BUTTON_SIZE.small,
             [styles.sizeLarge]: size === BUTTON_SIZE.large,
@@ -43,10 +45,12 @@ export const Button = ({
             onClick={ handleClick }
         >
             { children }
-            <div className={icon === "Refresh" ? styles.icon360 : null}>{ icon? <SvgIcons
-                icon={icon}
-                color={iconColor}
-            /> : null }</div>
+            <div className={icon === "Refresh" ? styles.icon360 : null}>
+                { icon? <SvgIcons
+                            icon={icon}
+                            color={iconColor}
+                        /> : null }
+            </div>
             { text }
         </button>
     )
