@@ -5,18 +5,16 @@ import {
   BUTTON_SIZE as size,
 } from "../../Button/Button";
 import { useSelector, useDispatch } from 'react-redux';                      ////redux
-import { clearSearchValue, setSearchValue } from "../../../store/slices/filtersRowSlice";
+import { clearSearchValue, setSearchValue, clearFilters } from "../../../store/slices/filtersRowSlice";
 import styles from "./FilterRowTop.module.css";
+import {orders} from "../../../assets/mock/orders";
 
 export const FilterRowTop = ({
-  // handleClickFiltres,
-  // onChange,
-  // inputValue,
-  // handleClickInput,
-  handleClickClearFilters,
+  searchValue,
+  setInitialOrders
 }) => {
-  const searchValue = useSelector(state => state.filtersRow.searchValue);          ////redux
-    const isLoading = useSelector(state => state.view.isLoading);          ////redux
+
+  const isLoading = useSelector(state => state.view.isLoading);          ////redux
   const dispatch = useDispatch();
   
   const handleChange = ({ target: { value } }) => {
@@ -43,8 +41,7 @@ export const FilterRowTop = ({
             value={searchValue}  
             placeholder={"Номер заказа или ФИО"}
             onChange={handleChange}
-            children={
-              searchValue? ( 
+            children={ searchValue && (
                 <Button
                   color={button.blueText}
                   size={size.large}
@@ -52,7 +49,7 @@ export const FilterRowTop = ({
                   iconColor={"#BAD8F5"}
                   handleClick={handleClickClearInput}
                 />
-              ) : null
+              )
             }
           />
           <Button
@@ -64,7 +61,10 @@ export const FilterRowTop = ({
           />
           <Button
             text={"Сбросить фильтры"}
-            handleClick={handleClickClearFilters}
+            handleClick={() => {
+                dispatch(clearFilters());
+                setInitialOrders();
+            }}
           />
       </div>
         {isLoading && <Button

@@ -1,12 +1,10 @@
-
+import styles from "./TableColumnNames.module.css";
 export const TableColumnNames = ({
-    span,
+    title,
+    handleClick,
     children
 }) => {
     return (
-    <>
-        <span>{span}</span>
-        {children}
-    </>
+        <span onClick={handleClick} className={styles._}>{title}{children}</span>
     )
 }

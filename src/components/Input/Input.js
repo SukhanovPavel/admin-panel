@@ -11,6 +11,7 @@ import styles from './Input.module.css';
 export const Input = ({
   onKeyDown,
   ref,
+  disabled = false,
   isErr,
   isLock,
   topText = "",
@@ -49,7 +50,7 @@ export const Input = ({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          disabled={isLock}
+          disabled={disabled}
         ></input>
         {children}
       </div>

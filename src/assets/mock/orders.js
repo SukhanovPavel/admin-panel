@@ -14,23 +14,21 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '101 907 ₽',
+        totalPrice: '101907',
         clientName: 'Чернышев Филипп Семёнович',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 2,
-        checked: true,
+        checked: false,
         number: '1111111',
         date: '03.02.2021',
         time: '08:04',
@@ -42,35 +40,32 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '98 003 ₽',
+        totalPrice: '98003',
         clientName: 'Николай',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 3,
         checked: false,
         number: '4562891',
-        date: '21.01.2021',
+        date: '02.01.2021',
         time: '13:34',
         icon: "Abort",
         productStatus: 'Отменен',
         color: "#000000",
-        positions: '-',
-        totalprice: '-',
+        positions: '0',
+        productDetails: [],
+        totalPrice: '0',
         clientName: 'Судакова Анастасия Ильинична',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: true
+        loyalty: 'Новичок'
     },
     {
         id: 4,
@@ -86,19 +81,17 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '5 700 ₽',
+        totalPrice: '5700',
         clientName: 'Андрей',
-        loyalty: 'Новичок',
-        textGreen: true,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 5,
@@ -114,19 +107,17 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '20 500 ₽',
+        totalPrice: '20500',
         clientName: 'Филиппов Степан Васильевич',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 6,
@@ -142,19 +133,17 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '101 907 ₽',
+        totalPrice: '101907',
         clientName: 'Чернышев Филипп Семёнович',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 7,
@@ -170,19 +159,17 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '98 003 ₽',
+        totalPrice: '98003',
         clientName: 'Николай',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 8,
@@ -193,12 +180,11 @@ export const orders = [
         icon: "Abort",
         productStatus: 'Отменен',
         color: "#000000",
-        positions: '-',
-        totalPrice: '-',
+        positions: '0',
+        productDetails: [],
+        totalPrice: '0',
         clientName: 'Судакова Анастасия Ильинична',
-        loyalty: 'Новичок',
-        textGreen: false,
-        opacity: true
+        loyalty: 'Новичок'
     },
     {
         id: 9,
@@ -214,19 +200,17 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '5 700 ₽',
+        totalPrice: '5700',
         clientName: 'Андрей',
-        loyalty: 'Новичок',
-        textGreen: true,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 10,
@@ -242,19 +226,17 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '101 907 ₽',
+        totalPrice: '101907',
         clientName: 'Чернышев Филипп Семёнович',
-        loyalty: 'Новичок',
-        textGreen: true,
-        opacity: false
+        loyalty: 'Новичок'
     },
     {
         id: 11,
@@ -270,18 +252,57 @@ export const orders = [
             {
                 article: 'rt12.024',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339 ₽'
+                price: '15 339'
             },
             {
                 article: 'al24.600',
                 productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664 ₽'
+                price: '82 664'
             }
         ],
-        totalPrice: '98 003 ₽',
+        totalPrice: '98003',
         clientName: 'Николай',
-        loyalty: 'Новичок',
-        textGreen: true,
-        opacity: false
+        loyalty: 'Новичок'
+    },
+    {
+        id: 12,
+        checked: false,
+        number: '9123143',
+        date: '21.01.2021',
+        time: '18:00',
+        icon: "Dot",
+        productStatus: 'Отменен',
+        color: "#FF8C56",
+        positions: '6',
+        productDetails: [
+            {
+                article: 'rt12.024',
+                productName: 'Стилл блэйдс фо гласс',
+                price: '15 339'
+            },
+            {
+                article: 'al24.600',
+                productName: 'Газонокосилка Apple MagiGrass Removeer',
+                price: '82 664'
+            }
+        ],
+        totalPrice: '101907',
+        clientName: 'Филипп',
+        loyalty: 'Новичок'
+    },
+    {
+        id: 13,
+        checked: false,
+        number: '45628213',
+        date: '21.01.2021',
+        time: '13:34',
+        icon: "Dot",
+        productStatus: 'Отменен',
+        color: "#FF8C56",
+        positions: '0',
+        productDetails: [],
+        totalPrice: '0',
+        clientName: 'Судакова Анастасия Ильинична',
+        loyalty: 'Новичок'
     },
 ]

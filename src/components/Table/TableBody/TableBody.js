@@ -1,16 +1,15 @@
 import { useSelector } from 'react-redux';
 import {
-    TableDataRow,
-    ScrollCustom
+    TableDataRow
 } from "../../index"
 
 import styles from "./TableBody.module.css";
 
-export const TableBody = () => {
-    const orders = useSelector(state => state.orders);
+export const TableBody = ({orders, checkOrder}) => {
 
-    const tableRow = orders.map((i, index) => <TableDataRow
-        key={index}
+    const tableRow = orders.map(i => <TableDataRow
+        key={i.id}
+        checkOrder={checkOrder}
         checked={i.checked}
         number={i.number}
         date={i.date}
@@ -23,6 +22,7 @@ export const TableBody = () => {
         icon={i.icon}
         textGreen={i.textGreen}
         opacity={i.opacity}
+        id={i.id}
     />
     );
     return (

@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import {setOrders} from "./ordersSlice";
 
 export const filtersRowSlice = createSlice({
 
@@ -7,20 +8,11 @@ export const filtersRowSlice = createSlice({
     initialState: {
         searchValue: '',
         openFiltersButton: false,
-        clearFilters: '',  // add /////////////
         dateInputValueFrom: '',
         dateInputValueTo: '',
-        orderStatus: {
-            Новый: false,
-            Рассчет: false,
-            Подтвержден: false,
-            Отложен : false,
-            Выполнен: false,
-            Отменен: false,
-        },
+        orderStatus: '',
         orderPriceFrom: '',
-        orderPriceTo: '',
-        applyFiltersButton: '' // add ////////////
+        orderPriceTo: ''
     },
 
     reducers: {
@@ -33,34 +25,53 @@ export const filtersRowSlice = createSlice({
         setOpenFiltersButton: state => {
             return !state.openFiltersButton
         },
-        setClearFilters: () => {}, //add func ///////////
+        clearFilters: (_, {payload}) => {
+            return {
+            searchValue: '',
+            openFiltersButton: false,
+            dateInputValueFrom: '',
+            dateInputValueTo: '',
+            orderStatus: '',
+            orderPriceFrom: '',
+            orderPriceTo: ''
+        }},
+        setFilterData: (state, {payload}) => ({...state, [payload.name]: payload.text}),
+
         setDateInputValueFrom: ( state, { payload } ) => { 
             state.dateInputValueFrom = payload.text;
         },
         setDateInputValueTo: ( state, { payload } ) => { 
             state.dateInputValueTo = payload.text
         },
-        setOrderStatus: () => {}, //add ///////////
+        setOrderStatus: (state, {payload}) => (
+            {
+                ...state,
+                orderStatus: payload
+            }),
         setOrderPriceFrom: ( state, { payload } ) => { 
                 state.orderPriceFrom = payload.text
         },
         setOrderPriceTo: ( state, { payload } ) => { 
                 state.orderPriceTo = payload.text
         },
-        setApplyFiltersButton: () => {}//add ///////////////
+        confirmFiltersButton: (state, {payload}) => {
+            payload.filter(item => item.orderStatus === state.orderStatus)
+        }
     }
 })
 
 export const {
+    setFilterData,
     clearSearchValue,
     setSearchValue,
     setOpenFiltersButton,
-    setClearFilters,
+    clearFilters,
     setDateInputValueFrom,
     setDateInputValueTo,
     setOrderStatus,
     setOrderPriceFrom,
     setOrderPriceTo,
+    confirmFiltersButton,
     setApplyFiltersButton
 
 } = filtersRowSlice.actions;
