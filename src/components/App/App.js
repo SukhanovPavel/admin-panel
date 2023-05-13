@@ -15,6 +15,8 @@ const doubleOrders = [...initialOrders];
 
 const App = () => {
   const [modalState, setModalState] = useState(false, );
+  const [changedOrder, setChangedOrder] = useState(null);
+
   const dispatch = useDispatch();
 
   const searchValue = useSelector(state => state.filtersRow.searchValue);        ////redux
@@ -44,16 +46,20 @@ const App = () => {
     <PageHeader/>
     <FilterRow searchValue={searchValue} setInitialOrders={() => dispatch(setOrders(doubleOrders))}/>
     <Table
-        openModal={() => setModalState(!modalState)}
+        openModal={() => {
+          const filterOrder = [...orders];
+          setChangedOrder(filterOrder.filter(item => item.checked === true)[0]);
+          setModalState(!modalState);
+        }}
         orders={inputFilterOrders}
         handleFilterProduct={sortNumOrders}
         checkOrder={() => {}}
     />
     {modalState && (
       <ModalCard
-        // getModal={modalState}
-        handleClickCloseModal={() => setModalState(!modalState)}
-        handleClickcloseModalOutside={() => setModalState(!modalState)}
+          order={changedOrder}
+          handleClickCloseModal={() => setModalState(!modalState)}
+          handleClickcloseModalOutside={() => setModalState(!modalState)}
       />
     )}
   </>

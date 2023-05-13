@@ -12,7 +12,8 @@ import styles from './ModalCard.module.css';
 export const ModalCard = ({
     // getModal,
     handleClickcloseModalOutside,
-    handleClickCloseModal
+    handleClickCloseModal,
+    order
 }) => {
     // const modalWindow = cx({
     //     [styles.modal]: true,
@@ -21,9 +22,9 @@ export const ModalCard = ({
     return (
         <div className={styles.modal} onClick={ e => (e.currentTarget === e.target) && handleClickcloseModalOutside() }>
             <div className={styles._}>
-                <ModalHeader handleClickCloseModal={handleClickCloseModal}/>
+                <ModalHeader orderNumber={order.number} handleClickCloseModal={handleClickCloseModal}/>
 
-                <ModalMain />
+                <ModalMain  order={order}/>
 
                 <div className={styles.modalFooter}>
                     <div className={styles.loadIndicator}>Ошибка или индикатор загрузки</div>
