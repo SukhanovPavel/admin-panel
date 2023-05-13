@@ -6,12 +6,12 @@ import {
 
 import styles from './ModalTable.module.css';
 
-export const ModalTable = () => {
+export const ModalTable = ({order}) => {
     return (
         <div className={styles.modalTable}>
             <ModalTableHeader />
-            <ModalTableDataRows />
-            <ModalTableFooter />
+            <ModalTableDataRows productDetails={order.productDetails}/>
+            <ModalTableFooter totalPrice={order.totalPrice}/>
         </div>
     )
 }

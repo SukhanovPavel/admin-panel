@@ -7,11 +7,11 @@ import {
 //     productDetails: []
 // }];
 
-export const ModalTableDataRows = () => {
+export const ModalTableDataRows = ({productDetails}) => {
 
-    const orders = useSelector(state => state.orders);
+    // const orders = useSelector(state => state.orders);
 
-    return orders[1].productDetails.map(i =>
+    return productDetails.map(i =>
         <ModalDataRow
             article={i.article}
             productName={i.productName}

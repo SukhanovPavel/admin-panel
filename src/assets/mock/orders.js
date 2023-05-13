@@ -79,15 +79,10 @@ export const orders = [
         positions: '1',
         productDetails: [
             {
-                article: 'rt12.024',
+                article: 'rt12.025',
                 productName: 'Стилл блэйдс фо гласс',
-                price: '15 339'
+                price: '5700'
             },
-            {
-                article: 'al24.600',
-                productName: 'Газонокосилка Apple MagiGrass Removeer',
-                price: '82 664'
-            }
         ],
         totalPrice: '5700',
         clientName: 'Андрей',

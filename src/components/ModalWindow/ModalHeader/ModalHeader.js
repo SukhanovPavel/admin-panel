@@ -8,15 +8,24 @@ import {
     BUTTON_COLOR as color
 } from '../../Button/Button';
 import styles from './ModalHeader.module.css';
+import {useEffect, useState} from "react";
 
 export const ModalHeader = ({
-    handleClickCloseModal
+    handleClickCloseModal,
+    orderNumber
 }) => {
     const orders = useSelector(state => state.orders);
+    const checkedOrder = [...orders];
+    useEffect(() => {
+        checkedOrder.filter(item => item.checked)
+    }, []);
+
+    const [number, setNumber] = useState("");
+
     return (
         <div className={styles.modalHeader}>
             <TitleText
-                title={`Заявка #${orders.length ? orders[1].number : ''}`}
+                title={`Заявка #${orderNumber ? orderNumber : ''}`}
                 colorBlue={true} 
             />
             <Button
